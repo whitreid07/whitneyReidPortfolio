@@ -530,7 +530,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 45%;
   padding-right: 5%;
 }
 
@@ -540,67 +540,40 @@ li {
   width: 50%;
 }
 
-.skillsToolkit {
+.iconGrouping,
+img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  border: 2px solid red;
-}
-
-.iconGroupOne,
-.iconGroupTwo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 10vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.iconSection,
-.contactFormContainer {
-  padding: 5% 0;
-}
-
-.iconContainer {
-  display: block;
+  padding: 10% 0;
 }
 
 i {
-  font-size: 4rem;
   margin: 0 1rem;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  margin-bottom: 55%;
+  padding-bottom: 55%;
+  font-size: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 4rem;
 }
 
-.adobeLogo i {
-  font-size: 3.5rem;
-}
-
-.jQueryLogo,
-.fireBaseLogo,
-.w3cLogo,
-.responsiveLogo,
-.vsCodeLogo {
-  width: 5vw;
-  margin: 0 1rem;
-}
-
-.vsCodeLogo {
-  width: 4vw;
+.skillsToolkit {
+  margin: 0  8rem;
+  position: relative;
+  border: 2px solid red;
 }
 
 footer {
@@ -645,6 +618,10 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: none;
         -ms-flex-pack: none;
             justify-content: none;
@@ -656,6 +633,7 @@ footer {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin: 0;
   }
 }
 
@@ -677,14 +655,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .innerWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .zoltarSpeaksContents,
   .foodieAppContents,
   .eventsAppContents {

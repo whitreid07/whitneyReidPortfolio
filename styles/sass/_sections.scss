@@ -40,7 +40,7 @@ $secondary: #808080;
 .eventsAppContents {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   padding-right: 5%;
 }
 
@@ -52,55 +52,31 @@ $secondary: #808080;
 
 //TOOLKIT
 
-
-.skillsToolkit {
+.iconGrouping,
+img {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  border: 2px solid red;
-}
-
-.iconGroupOne,
-.iconGroupTwo {
-  display: flex;
-  margin: 0 10vw;
+  flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-between;
-}
-
-.iconSection,
-.contactFormContainer {
-  padding: 5% 0;
-}
-
-.iconContainer {
-  display: block;
+  // justify-content: space-around;
+  // height: 50vh;
+  padding: 10% 0;
 
 }
 
 i {
-  font-size: 4rem;
-  margin: 0 1rem; 
-  flex-wrap: nowrap;
-  margin-bottom: 55%;
-  display: flex;
-}
-
-.adobeLogo i  {
-  font-size: 3.5rem;
-}
- 
-.jQueryLogo,
-.fireBaseLogo,
-.w3cLogo,
-.responsiveLogo,
-.vsCodeLogo {
-  width: 5vw;
   margin: 0 1rem;
+  padding-bottom: 55%;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 4rem;
 }
 
-.vsCodeLogo {
-  width: 4vw;
+.skillsToolkit {
+  margin: 0  8rem;  
+  position: relative;
+  border: 2px solid red;
 }
 
 footer {
@@ -119,7 +95,6 @@ footer {
   .zoltarSpeaksButtonContainer,
   .eventsAppButtonContainer {
     margin-left: 10%;
-    // border: 2px solid red;
   }
 
   .foodieAppImageContainer {
@@ -148,14 +123,16 @@ footer {
   .iconGroupOne,
   .iconGroupTwo {
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     // width: 100%;
     justify-content: none;
     display: inline-flex;
+    // margin: 0;
   }
 
   i {
     display: inline-flex;
+    margin: 0;
   }
 
 }
@@ -181,10 +158,10 @@ footer {
 
 @media only screen and (max-width: 767px){
 
-  .innerWrapper {
-    display: flex;
-    justify-content: center;
-  }
+  // .innerWrapper {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
   .zoltarSpeaksContents,
   .foodieAppContents,
