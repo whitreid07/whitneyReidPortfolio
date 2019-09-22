@@ -1,0 +1,119 @@
+$primary: #8f278f;
+$secondary: #808080;
+
+
+.contactFormContainer {
+  background-color: rgba(220, 220, 220, 0.2);
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+}
+
+.contactFieldset {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.contactFormCommentButton {
+  display: flex;
+  flex-direction: column;
+}
+
+// FORM STYLES
+
+.formContainer {
+  width: 80%;
+  margin-top: -14%;
+}
+
+.formContents {
+  width: 87%;
+}
+
+.contactFormInput {
+  display:flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+
+.contactContainer {
+  display: flex;
+}
+
+.contactParagraph {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.formContents {
+  width: 87%;
+}
+
+ #contactName,
+ #contactEmail {
+    border: none;
+    // border-bottom: 1px solid #86e0f9;
+    background:$primary;
+    padding: 0 5%;
+    padding: 3%;
+    width: 45%;
+}
+
+#contactComment {
+  // border: 1px solid #86e0f9;
+  background:$primary;
+}
+
+.contactFieldset {
+  border: none;
+}
+
+.contactButton {
+  background: #0c1423;
+  border: 1px solid #0c1423;
+  text-align: center;
+  line-height: 32px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.contactFormCommentButton {
+  display: flex;
+  flex-direction: column;
+}
+
+ #contactName,
+ #contactEmail {
+    border: none;
+    border-bottom: 1px solid $primary;
+    width: 45%;
+}
+
+#contactComment {
+  border: 1px solid $primary;
+  width: 100%;
+}
+
+.contactForm input,
+textarea {
+    color: white;
+    padding: 3%;
+}
+
+#contactName:focus-within,
+#contactEmail:focus-within,
+#contactComment:focus-within {
+  border: 2px solid #0c1423;
+}
+
+.submitButton p {
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+
+.submitButtonContainer {
+    margin: 3% 0;
+
+}

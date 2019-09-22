@@ -1,0 +1,244 @@
+$primary: #8f278f;
+$secondary: #808080;
+
+// .aboutMe {
+//   display: flex;
+//   border: 2px solid red;
+// }
+
+.sectionHeading h2 {
+  text-transform: capitalize;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  color: $secondary;
+}
+
+//PROJECTS
+
+.projects {
+  background-color: rgba(220,220,220, 0.1);
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  padding: 5% 0;
+}
+
+.zoltarSpeaksContents p,
+.foodieAppContents p,
+.eventsAppContents p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.zoltarSpeaksContainer,
+.foodieAppContainer,
+.eventsAppContainer {
+  display: flex;
+}
+
+.zoltarSpeaksContents,
+.foodieAppContents,
+.eventsAppContents {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 5%;
+}
+
+.zoltarImageContainer,
+.foodieAppImageContainer,
+.eventsAppImageContainer {
+  width: 50%;
+}
+
+//TOOLKIT
+
+
+.skillsToolkit {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid red;
+}
+
+.iconGroupOne,
+.iconGroupTwo {
+  display: flex;
+  margin: 0 10vw;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.iconSection,
+.contactFormContainer {
+  padding: 5% 0;
+}
+
+.iconContainer {
+  display: block;
+
+}
+
+i {
+  font-size: 4rem;
+  margin: 0 1rem; 
+  flex-wrap: nowrap;
+  margin-bottom: 55%;
+  display: flex;
+}
+
+.adobeLogo i  {
+  font-size: 3.5rem;
+}
+ 
+.jQueryLogo,
+.fireBaseLogo,
+.w3cLogo,
+.responsiveLogo,
+.vsCodeLogo {
+  width: 5vw;
+  margin: 0 1rem;
+}
+
+.vsCodeLogo {
+  width: 4vw;
+}
+
+footer {
+  color: #fff;
+  background: $secondary;
+}
+
+//MEDIA QUERIES
+
+@media only screen and (max-width: 1310px){
+
+  .zoltarHeading,
+  .eventsHeading,
+  .zoltarParagraph,
+  .eventsParagraph,
+  .zoltarSpeaksButtonContainer,
+  .eventsAppButtonContainer {
+    margin-left: 10%;
+    // border: 2px solid red;
+  }
+
+  .foodieAppImageContainer {
+    margin-left: 3%;
+  }
+
+  .jQueryLogo, 
+  .fireBaseLogo, 
+  .w3cLogo, 
+  .responsiveLogo, 
+  .vsCodeLogo {
+    width: 7vw;
+    margin: 0 1rem;
+  }    
+}
+
+
+
+@media only screen and (max-width: 1030px){
+
+  .skillsToolkit {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .iconGroupOne,
+  .iconGroupTwo {
+    display: flex;
+    // flex-direction: column;
+    // width: 100%;
+    justify-content: none;
+    display: inline-flex;
+  }
+
+  i {
+    display: inline-flex;
+  }
+
+}
+
+@media only screen and (max-width: 896px){
+  p.zoltarParagraph,
+  p.foodieParagraph,
+  p.eventsParagraph {
+    font-size: 0.8rem;
+    line-height:  1rem;
+  }
+
+  .zoltarImageContainer .eventsAppImageContainer {
+    width: 66%;
+  }
+
+ .zoltarSpeaksButtonContainer button,
+ .eventsAppButtonContainer button {
+    margin: 3% 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 767px){
+
+  .innerWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .zoltarSpeaksContents,
+  .foodieAppContents,
+  .eventsAppContents {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .zoltarImageContainer,
+  .foodieAppImageContainer,
+  .eventsAppImageContainer {
+    display: flex;
+    order: -1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .zoltarSpeaksContainer,
+  .foodieAppContainer,
+  .eventsAppContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+  }
+
+  p.zoltarParagraph,
+  .zoltarHeading,
+  p.foodieParagraph,
+  .foodieHeading,
+  p.eventsParagraph,
+  .eventsHeading {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+
+  .zoltarHeading,
+  .foodieHeading,
+  .eventsHeading {
+    padding-top: 5%;
+  }
+
+  .zoltarSpeaksButtonContainer,
+  .eventsAppButtonContainer{
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 3%;
+  }
+
+  .foodieAppButtonContainer {
+    margin: 0;
+    padding-top: 3%;
+  }
+}

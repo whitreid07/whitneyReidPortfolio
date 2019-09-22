@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{filter:url(#filter-4);}
+	.st2{fill:#FFFFFF;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="200%" id="filter-4" width="200%" x="-50%" y="-50%">
+	<feGaussianBlur  in="SourceAlpha" result="shadowBlurInner1" stdDeviation="3.5"></feGaussianBlur>
+	<feOffset  dx="1" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+	<feComposite  in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1">
+		</feComposite>
+	<feColorMatrix  in="shadowInnerInner1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.09 0"></feColorMatrix>
+</filter>
+<filter  filterUnits="objectBoundingBox" height="200%" id="filter-2" width="200%" x="-50%" y="-50%">
+	<feGaussianBlur  in="SourceAlpha" result="shadowBlurInner1" stdDeviation="17.5"></feGaussianBlur>
+	<feOffset  dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+	<feComposite  in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1">
+		</feComposite>
+	<feColorMatrix  in="shadowInnerInner1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"></feColorMatrix>
+</filter>
+<g>
+	<path d="M6.3,32.3l0.2-0.3L18,10.2l0-0.2l-5-9.5c-0.4-0.8-1.6-0.6-1.8,0.3L6.3,32.3z"/>
+	<g>
+		<g>
+			<path id="path-1" d="M6.5,32l0.2-0.4L18,10.2l-5-9.5c-0.4-0.8-1.5-0.6-1.6,0.3L6.5,32z"/>
+		</g>
+		<g class="st0">
+			<path id="path-1_1_" d="M6.5,32l0.2-0.4L18,10.2l-5-9.5c-0.4-0.8-1.5-0.6-1.6,0.3L6.5,32z"/>
+		</g>
+	</g>
+	<path d="M21.7,17.2l3.8-3.9l-3.8-7.2c-0.4-0.7-1.4-0.7-1.7,0L18,10v0.3L21.7,17.2z"/>
+	<g>
+		<g>
+			<path id="path-3" d="M21.7,17l3.7-3.7l-3.7-7c-0.3-0.7-1.2-0.7-1.5-0.1l-2,3.9L18,10.3L21.7,17z"/>
+		</g>
+		<g class="st1">
+			<path id="path-3_1_" d="M21.7,17l3.7-3.7l-3.7-7c-0.3-0.7-1.2-0.7-1.5-0.1l-2,3.9L18,10.3L21.7,17z"/>
+		</g>
+	</g>
+	<polygon class="st2" points="6.3,32.3 6.4,32.2 6.8,32 21.5,17.4 21.7,16.9 18,9.9 	"/>
+	<path d="M22.2,39.7l13.3-7.4L31.7,8.9c-0.1-0.7-1-1-1.5-0.5L6.3,32.3l13.2,7.4C20.3,40.1,21.4,40.1,22.2,39.7"/>
+	<path d="M35.3,32.2L31.6,9c-0.1-0.7-0.9-1-1.4-0.5L6.5,32.2l13,7.3c0.8,0.5,1.8,0.5,2.7,0L35.3,32.2z"/>
+	<path d="M22.2,39.4c-0.8,0.5-1.8,0.5-2.7,0L6.4,32.2l-0.1,0.1l13.2,7.4c0.8,0.5,1.8,0.5,2.7,0l13.3-7.4l0-0.2L22.2,39.4z"/>
+</g>
+</svg>
