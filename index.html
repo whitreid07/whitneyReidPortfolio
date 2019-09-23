@@ -10,6 +10,7 @@
   <link type="image/png" href="favicon/nemo.png" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Montserrat:400,700&display=swap"
     rel="stylesheet">
+  <link type="image/png" href="favicon/whitney-reid.png" rel="icon">
   <title>Whitney Reid's Porfolio</title>
 </head>
 
@@ -22,6 +23,9 @@
 
         <!-- NAV STARTS -->
         <nav class="navLinks">
+          <div class="logoContainer">
+            <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
+          </div>
           <ul>
             <li><a href="index.html">home</a></li>
             <li><a href="#projects">projects</a></li>
@@ -36,13 +40,17 @@
           </div>
 
           <div class="headerContents">
-            <p class="headerParagraph">I am more than meets the eye! I have a background in design and have a passion to
-              build engaging web applications to capivate the best user experience using HTML, CSS, JavaScript and
+            <p class="headerParagraph">I am more than meets the eye! I have a background in design and have a passion in
+              building engaging web applications to capivate the best user experience using HTML, CSS, JavaScript and
               React! </p>
-            <button>download <span>cv</span></button>
+            <button><a href="resume/whitneyReidResume">download <span>cv</span></a></button>
+          </div>
+          <div class="arrowContainer">
+            <i class="fas fa-angle-double-down"></i>
           </div>
         </div>
       </div>
+
 
       <section class="headerIcons">
         <a href="https://www.linkedin.com/in/whitney-reid-49282041/" target="_blank">
@@ -60,20 +68,13 @@
           <span class="sr-only">Github Icon</span>
         </a>
 
-        <!-- <a href="https://github.com/whitreid07" target="_blank">
-          <span><i class="fab fa-github" aria-hidden="true"></i></span>
-          <span class="sr-only">Github Icon</span>
-        </a> -->
-
-
-
     </header> <!-- End of header-->
 
     <main>
 
       <!--PROJECT 1 -->
       <section class="projects">
-        <h2 class="sectionHeading" id="projects">projects i've created!</h2>
+        <h2 class="sectionHeading" id="projects">my portfolio</h2>
 
         <div class="innerWrapper">
           <div class="zoltarSpeaksContainer">
@@ -81,18 +82,18 @@
               <h3 class="zoltarHeading">zoltar speaks</h3>
               <p class="zoltarParagraph">Want some useful advice? Zoltar can help! Ask a wish and navigate your coin
                 through a maze full of
-                challenges to get your wish granted. A mob programming project with Zora,
-                Konrad and Abdullahi.</p>
+                challenges to get your wish granted. A mob programming project.</p>
 
               <div class="zoltarSpeaksButtonContainer">
-                <button>View Live</button>
-                <button>View Github</button>
+                <button><a href="https://zoltar-speaks.firebaseapp.com/" target="_blank">View Live</button>
+                <button> <a href="https://github.com/groupThreeProjectSix/zoltarSpeaks" target="_blank">View
+                    Github</a></button>
               </div>
 
             </div>
 
             <div class="zoltarImageContainer">
-              <img src="images/zoltarSpeaksMockUp.png" alt="">
+              <img src="images/zoltarSpeaksMockUp.png" alt="zoltar speaks mockup">
             </div>
           </div>
 
@@ -104,7 +105,7 @@
     <div class="innerWrapper">
       <div class="foodieAppContainer">
         <div class="foodieAppImageContainer">
-          <img src="images/zoltarSpeaksMockUp.png" alt="">
+          <img src="images/foodieAppMockUp.png" alt="foodie mockup">
         </div>
         <div class="foodieAppContents">
           <h3 class="foodieHeading">foodie app</h3>
@@ -113,8 +114,10 @@
             the recipe you choose you have the tools to get started.</p>
 
           <div class="foodieAppButtonContainer">
-            <button>View Live</button>
-            <button>View Github</button>
+            <button><a href="https://whitreid07.github.io/whitneyReidProjectFive/" target="_blank">View
+                Live</a></button>
+            <button><a href="https://github.com/whitreid07/whitneyReidProjectFive" target="_blank">View
+                Github</a></button>
           </div>
 
         </div>
@@ -129,17 +132,19 @@
           <h3 class="eventsHeading">Events App</h3>
           <p class="eventsParagraph">Are you looking for something fun to do in your city? Check out this events app
             where you select your city,
-            type of event and specific date to see what's happening! A pair programming project with Norre.</p>
+            type of event and specific date to see what's happening! A pair programming project.</p>
 
           <div class="eventsAppButtonContainer">
-            <button>View Live</button>
-            <button>View Github</button>
+            <button><a href="https://norrewhitneyprojectfour.github.io/whitneyNorreProjectFour/" target="_blank">View
+                Live</a></button>
+            <button><a href="https://github.com/norreWhitneyProjectFour/whitneyNorreProjectFour" target="_blank">View
+                Github</a></button>
           </div>
 
         </div>
 
         <div class="eventsAppImageContainer">
-          <img src="images/zoltarSpeaksMockUp.png" alt="">
+          <img src="images/eventsAppMockup.png" alt="events mockup">
         </div>
 
       </div>
@@ -151,61 +156,68 @@
 
 
     <div class="iconGrouping">
-      <div class="iconContainer">
-        <i class="fab fa-html5 htmlLogo"></i>
+
+      <div class="gridItem gridItem1">
+        <img src="images/html5.svg" alt="html5 logo">
       </div>
 
-      <div class="iconContainer css3Logo ">
-        <i class="fab fa-css3-alt"></i>
+
+      <div class="gridItem gridItem2">
+        <img src="images/css3.svg" alt="css3 logo">
       </div>
 
-      <div class="iconContainer sassLogo">
-        <i class="fab fa-sass"></i>
+      <div class="gridItem gridItem3">
+        <img src="images/sass.svg" alt="sass logo">
       </div>
 
-      <div class="iconContainer javascriptLogo">
-        <i class="fab fa-js"></i>
+      <div class="gridItem gridItem4">
+        <img src="images/javascript.svg" alt="html5 logo">
       </div>
 
-      <div class="iconContainer reactLogo">
-        <i class="fab fa-react"></i>
+      <div class="gridItem gridItem5">
+        <img src="images/react.svg" alt="react logo">
       </div>
 
-      <div class="iconContainer terminalLogo">
-        <i class="fas fa-terminal"></i>
+      <div class="gridItem gridItem6">
+        <img src="images/terminal.svg" alt="jQuery Logo">
       </div>
 
-      <div class="iconContainer githubLogo">
-        <i class="fab fa-github"></i>
+      <div class="gridItem gridItem7">
+        <img src="images/github.svg" alt="github logo">
       </div>
 
-      <div class="iconContainer adobeLogo ">
-        <i class="fab fa-adobe"></i>
+      <div class="gridItem gridItem8">
+        <img src="images/adobe.svg" alt="html5 logo">
       </div>
 
-      <div class="iconContainer gitLogo">
-        <i class="fab fa-git-alt"></i>
+      <div class="gridItem gridItem9">
+        <img src="images/git.svg" alt="html5 logo">
       </div>
 
-      <div class="iconContainer jQueryLogo">
-        <img class="jQueryLogo" src="images/jQuery.svg" alt="jQuery Logo">
+      <div class="gridItem gridItem10">
+        <img src="images/jQuery.svg" alt="jQuery Logo">
       </div>
 
-      <div class="iconContainer fireBaseLogo">
-        <img class="fireBaseLogo" src="images/fireBaseLogo.svg" alt="Firebase Logo">
+      <div class="gridItem gridItem11">
+        <img src="images/responsiveLogo.svg" alt="Responsive Logo">
       </div>
 
-      <div class="iconContainer w3cLogo">
-        <img class="w3cLogo" src="images/w3cLogo.svg" alt="jQuery Logo">
+      <div class="gridItem gridItem12">
+        <img src="images/w3cLogo.svg" alt="jQuery Logo">
       </div>
 
-      <div class="iconContainer responsiveLogo">
-        <img class="responsiveLogo" src="images/responsiveLogo.svg" alt="Responsive Logo">
+      <!-- <div class="gridItem gridItem13">
+        <img src="images/responsiveLogo.svg" alt="Responsive Logo">
+      </div> -->
+
+
+      <!-- <div class="gridItem gridItem11">
+        <img src="images/firebase.svg" alt="Firebase Logo">
       </div>
 
-      <div class="iconContainer vsCodeLogo">
-        <img class="vsCodeLogo" src="images/vsCodeLogo.svg" alt="Vs Code Logo">
-      </div>
+      <div class="gridItem gridItem14">
+        <img src="images/vsCodeLogo.svg" alt="Vs Code Logo">
+      </div> -->
     </div>
 
   </section>
@@ -214,7 +226,7 @@
   <div class="contactFormContainer" id="contact">
     <h2 class="sectionHeading">get in touch</h2>
     <div class="innerWrapper">
-      <form class="contactForm" action="">
+      <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
         <fieldset class="contactFieldset">
           <p class="contactParagraph">I would love to hear from you! If you would like to collobrate on a cool idea or
             just want to grab a coffee
@@ -248,6 +260,10 @@
     <p class="footerPargraph">Created and Designed by Whitney Reid © 2019</p>
   </footer>
   </div> <!-- End of wrapper-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -6,20 +6,18 @@
   background-repeat: no-repeat;
  }
 
- .backgroundImage {
-   position: fixed;
- }
-
 .headerContentsContainer {
   display: flex;
   flex-direction: column;
-
 }
 
 .navLinks {
   display: flex;
   flex-direction: row;
   padding: 1% 0;
+  a {
+    color: $secondary;
+  }
 }
 
 nav li:first-child {
@@ -27,14 +25,22 @@ nav li:first-child {
 }
 
 ul {
-  height: 50px;
   display: flex;
   padding-top: 1%;
+  align-items: center;
 }
 
 li {
   padding: 0 5%;
   text-transform: uppercase;
+}
+
+.logoContainer {
+  margin-right: 3%;
+}
+
+.whitneyLogo {
+  width: 70px;
 }
 
 .headerTitle {
@@ -72,6 +78,18 @@ li {
     transition: all 0.3s;
   }
 }
+
+.arrowContainer  {
+  text-align: center;
+  i {
+    font-size: 2rem;
+  }
+  &:hover {
+    color: $primary;
+    transition: all 0.3s;
+  }
+}
+
 
 //MEDIA QUERIES
 

@@ -65,8 +65,17 @@ p {
 }
 
 a {
-color: $secondary;
+color: #fff;
 text-decoration: none;
+transition: all 0.3s;
+}
+
+a:hover {
+  color: $secondary;
+}
+
+a:visted {
+  color: #fff;
 }
 
 a:focus {
