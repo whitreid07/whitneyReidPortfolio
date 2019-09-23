@@ -4,8 +4,6 @@
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
-
  }
 
  .backgroundImage {
@@ -21,7 +19,6 @@
 .navLinks {
   display: flex;
   flex-direction: row;
-  // border: 2px solid coral;
   padding: 1% 0;
 }
 
@@ -33,8 +30,6 @@ ul {
   height: 50px;
   display: flex;
   padding-top: 1%;
-  // padding-right: 10%;
-  // border: 2px solid coral;
 }
 
 li {
@@ -44,10 +39,6 @@ li {
 
 .headerTitle {
   color: $secondary;
-  // width: 50%;
-  // display: flex;
-  // flex-direction: row;
-  // border: 2px solid green;
 }
 
 .subHeader {
@@ -60,6 +51,26 @@ li {
   width: 50%;
   line-height: 1.3rem;
   color: #333;
+}
+
+.headerIcons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  bottom: 70px;
+  padding-right: 1%;
+  
+}
+
+.headerIcons i {
+  font-size: 0.9rem;
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+    transition: all 0.3s;
+  }
 }
 
 //MEDIA QUERIES

@@ -1,5 +1,6 @@
 $primary: #8f278f;
 $secondary: #696969;
+$tertiary: #ddbedd;
  
  html {
   font-size: 125%;
@@ -64,7 +65,7 @@ p {
 }
 
 a {
-color: #ffffff;
+color: $secondary;
 text-decoration: none;
 }
 
@@ -84,15 +85,19 @@ button {
   margin-right: 2%;
   
   &:hover {
-    background: #f5ebf5;
-    border: 1px solid #f5ebf5;
+    background: $tertiary;
+    border: 1px solid $tertiary;
     color: $secondary;
+    transition: all 0.3s;
   }
+}
+
+input {
+  border-bottom: 1px solid $primary;
 }
 
 span {
   text-transform: uppercase;
-  // display: block;
 }
 
 fieldset {
@@ -112,12 +117,7 @@ footer p {
 
 .wrapper {
   max-width: 1680px;
-    margin: 0 auto;
-
-  // width: 100%;
-  // height: 100%;
-  // border: 2px solid red;
-  // position: relative;
+  margin: 0 auto;
 }
 
 .innerWrapper {

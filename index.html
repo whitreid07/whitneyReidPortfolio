@@ -15,8 +15,12 @@
 
 <body>
   <div class="wrapper">
+
+    <!-- HEADER STARTS -->
     <header class="headerContainer">
       <div class="innerWrapper">
+
+        <!-- NAV STARTS -->
         <nav class="navLinks">
           <ul>
             <li><a href="index.html">home</a></li>
@@ -38,8 +42,30 @@
             <button>download <span>cv</span></button>
           </div>
         </div>
-
       </div>
+
+      <section class="headerIcons">
+        <a href="https://www.linkedin.com/in/whitney-reid-49282041/" target="_blank">
+          <span><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
+          <span class="sr-only">LinkedIn Icon</span>
+        </a>
+
+        <a href="https://twitter.com/whit_reid07" target="_blank">
+          <span><i class="fab fa-twitter" aria-hidden="true"></i></span>
+          <span class="sr-only">Twitter Icon</span>
+        </a>
+
+        <a href="https://github.com/whitreid07" target="_blank">
+          <span><i class="fab fa-github" aria-hidden="true"></i></span>
+          <span class="sr-only">Github Icon</span>
+        </a>
+
+        <!-- <a href="https://github.com/whitreid07" target="_blank">
+          <span><i class="fab fa-github" aria-hidden="true"></i></span>
+          <span class="sr-only">Github Icon</span>
+        </a> -->
+
+
 
     </header> <!-- End of header-->
 
@@ -53,7 +79,7 @@
           <div class="zoltarSpeaksContainer">
             <div class="zoltarSpeaksContents">
               <h3 class="zoltarHeading">zoltar speaks</h3>
-              <p class="zoltarParagraph">Want some useful advice? Zoltar can help! Ask him a wish and navigate your coin
+              <p class="zoltarParagraph">Want some useful advice? Zoltar can help! Ask a wish and navigate your coin
                 through a maze full of
                 challenges to get your wish granted. A mob programming project with Zora,
                 Konrad and Abdullahi.</p>
@@ -112,7 +138,7 @@
 
         </div>
 
-        <div class="zoltarImageContainer">
+        <div class="eventsAppImageContainer">
           <img src="images/zoltarSpeaksMockUp.png" alt="">
         </div>
 
@@ -121,7 +147,7 @@
   </section>
 
   <section class="skillsToolkit">
-    <h2 class="" id="projects">skills i know</h2>
+    <h2 class="sectionHeading" id="projects">skills i know</h2>
 
 
     <div class="iconGrouping">
@@ -161,23 +187,23 @@
         <i class="fab fa-git-alt"></i>
       </div>
 
-      <div class="iconContainer">
+      <div class="iconContainer jQueryLogo">
         <img class="jQueryLogo" src="images/jQuery.svg" alt="jQuery Logo">
       </div>
 
-      <div class="iconContainer">
+      <div class="iconContainer fireBaseLogo">
         <img class="fireBaseLogo" src="images/fireBaseLogo.svg" alt="Firebase Logo">
       </div>
 
-      <div class="iconContainer">
+      <div class="iconContainer w3cLogo">
         <img class="w3cLogo" src="images/w3cLogo.svg" alt="jQuery Logo">
       </div>
 
-      <div class="iconContainer">
+      <div class="iconContainer responsiveLogo">
         <img class="responsiveLogo" src="images/responsiveLogo.svg" alt="Responsive Logo">
       </div>
 
-      <div class="iconContainer">
+      <div class="iconContainer vsCodeLogo">
         <img class="vsCodeLogo" src="images/vsCodeLogo.svg" alt="Vs Code Logo">
       </div>
     </div>
@@ -186,7 +212,7 @@
 
   <!-- CONTACT FORM  -->
   <div class="contactFormContainer" id="contact">
-    <h2>get in touch</h2>
+    <h2 class="sectionHeading">get in touch</h2>
     <div class="innerWrapper">
       <form class="contactForm" action="">
         <fieldset class="contactFieldset">
@@ -196,15 +222,15 @@
 
           <div class="contactFormInput">
             <label for="text" class="visuallyHidden">Type your name</label>
-            <input type="name" placeholder="Name" id="contactName" name="name">
+            <input type="name" required=required placeholder="Name" id="contactName" name="name">
 
             <label for="email" class="visuallyHidden">Type your email address</label>
-            <input type="name" placeholder="Email address" id="contactEmail" name="email">
+            <input type="name" required=required placeholder="Email address" id="contactEmail" name="email">
           </div>
 
           <div class="contactFormCommentButton">
-            <label for="text" class="visuallyHidden">Type your comments</label>
-            <textarea rows="10" cols="50" id="contactComment" placeholder="Comments"></textarea>
+            <label for="text" class="visuallyHidden">Type your message</label>
+            <textarea rows="10" cols="50" id="contactComment" required=required placeholder="Message"></textarea>
 
             <div class="submitButtonContainer">
               <button>send email</button>

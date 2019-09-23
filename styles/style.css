@@ -242,7 +242,7 @@ p {
 }
 
 a {
-  color: #ffffff;
+  color: #696969;
   text-decoration: none;
 }
 
@@ -262,9 +262,15 @@ button {
 }
 
 button:hover {
-  background: #f5ebf5;
-  border: 1px solid #f5ebf5;
+  background: #ddbedd;
+  border: 1px solid #ddbedd;
   color: #696969;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input {
+  border-bottom: 1px solid #8f278f;
 }
 
 span {
@@ -361,6 +367,31 @@ li {
   width: 50%;
   line-height: 1.3rem;
   color: #333;
+}
+
+.headerIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 0;
+  bottom: 70px;
+  padding-right: 1%;
+}
+
+.headerIcons i {
+  font-size: 0.9rem;
+  color: #8f278f;
+}
+
+.headerIcons i:hover {
+  color: #696969;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media only screen and (max-width: 1490px) {
@@ -508,7 +539,7 @@ li {
 .foodieAppContents p,
 .eventsAppContents p {
   font-size: 1rem;
-  line-height: 1.3rem;
+  line-height: 1.4rem;
   font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -530,8 +561,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 45%;
+  width: 50%;
   padding-right: 5%;
+  margin-left: 5%;
 }
 
 .zoltarImageContainer,
@@ -540,8 +572,49 @@ li {
   width: 50%;
 }
 
-.iconGrouping,
-img {
+.zoltarImageContainer,
+.eventsAppImageContainer {
+  margin: 0 5%;
+}
+
+.iconContainer img {
+  width: 10vw;
+  height: 10vh;
+}
+
+.fireBaseLogo img,
+.w3cLogo img,
+.vsCodeLogo img,
+.responsiveLogo img {
+  width: 10vw;
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jQueryLogo img {
+  width: 7vw;
+}
+
+.skillsToolkit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5% 0;
+}
+
+.iconGrouping {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,35 +623,45 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10% 0;
+  margin: 0 20vw;
 }
 
 i {
   margin: 0 1rem;
   padding-bottom: 55%;
   font-size: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-size: 4rem;
 }
 
-.skillsToolkit {
-  margin: 0  8rem;
-  position: relative;
-  border: 2px solid red;
+.jQuerryLogo {
+  width: 10vw;
+}
+
+.contactFormContainer {
+  padding: 5% 0;
 }
 
 footer {
   color: #fff;
   background: #808080;
+}
+
+@media only screen and (max-width: 1577px) {
+  .iconGrouping {
+    margin: 0 18vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1490px) {
+  .iconGrouping {
+    margin: 0 15vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 1310px) {
@@ -593,13 +676,32 @@ footer {
   .foodieAppImageContainer {
     margin-left: 3%;
   }
-  .jQueryLogo,
-  .fireBaseLogo,
-  .w3cLogo,
-  .responsiveLogo,
-  .vsCodeLogo {
-    width: 7vw;
-    margin: 0 1rem;
+  .iconGrouping {
+    margin: 0 12vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1193px) {
+  .iconGrouping {
+    margin: 0 11vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1074px) {
+  .iconGrouping {
+    margin: 0 18vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  i {
+    font-size: 5rem;
   }
 }
 
@@ -637,6 +739,16 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1026px) {
+  .iconGrouping {
+    margin: 0 22vw;
+  }
+  i {
+    font-size: 5rem;
+    margin: 0 35%;
+  }
+}
+
 @media only screen and (max-width: 896px) {
   p.zoltarParagraph,
   p.foodieParagraph,
@@ -651,6 +763,37 @@ footer {
   .eventsAppButtonContainer button {
     margin: 3% 0;
     font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 836px) {
+  .iconGrouping {
+    margin: 0 25vw;
+  }
+  i {
+    font-size: 5rem;
+    margin: 0 15%;
+  }
+}
+
+@media only screen and (max-width: 823px) {
+  .iconGrouping {
+    margin: 0 25vw;
+  }
+  i {
+    font-size: 5rem;
+    margin: 0 15%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .iconContainer {
+    margin: 0 5%;
+  }
+  .jQueryLogo img,
+  .w3cLogo img {
+    width: 116px;
+    border: 2px solid red;
   }
 }
 
@@ -719,6 +862,42 @@ footer {
   }
 }
 
+@media only screen and (max-width: 509px) {
+  .iconGrouping {
+    margin: 0 25vw;
+    border: 2px solid purple;
+  }
+  i {
+    font-size: 5rem;
+    margin: 0 15%;
+  }
+  .jQueryLogo img,
+  .fireBaseLogo img,
+  .w3cLogo img,
+  .vsCodeLogo img,
+  .responsiveLogo img {
+    width: 21vw;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .iconGrouping {
+    margin: 0 20vw;
+    border: 2px solid purple;
+  }
+  i {
+    font-size: 4rem;
+    margin: 0 15%;
+  }
+  .jQueryLogo img,
+  .fireBaseLogo img,
+  .w3cLogo img,
+  .vsCodeLogo img,
+  .responsiveLogo img {
+    width: 21vw;
+  }
+}
+
 .contactFormContainer {
   background-color: rgba(220, 220, 220, 0.2);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
@@ -783,14 +962,15 @@ footer {
 #contactName,
 #contactEmail {
   border: none;
-  background: #8f278f;
+  background: #fff;
   padding: 0 5%;
   padding: 3%;
   width: 45%;
 }
 
 #contactComment {
-  background: #8f278f;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .contactFieldset {
@@ -798,8 +978,6 @@ footer {
 }
 
 .contactButton {
-  background: #0c1423;
-  border: 1px solid #0c1423;
   text-align: center;
   line-height: 32px;
   padding: 0.7rem;
@@ -820,25 +998,32 @@ footer {
 #contactName,
 #contactEmail {
   border: none;
-  border-bottom: 1px solid #8f278f;
+  border-bottom: 1px solid #fff;
   width: 45%;
 }
 
 #contactComment {
-  border: 1px solid #8f278f;
+  border: 1px solid #fff;
   width: 100%;
 }
 
 .contactForm input,
 textarea {
-  color: white;
+  color: #8f278f;
   padding: 3%;
+  resize: none;
+}
+
+input#contactName,
+input#contactEmail,
+textarea#contactComment {
+  border-bottom: 2px solid #8f278f;
 }
 
 #contactName:focus-within,
 #contactEmail:focus-within,
 #contactComment:focus-within {
-  border: 2px solid #0c1423;
+  border: 2px solid #8f278f;
 }
 
 .submitButton p {

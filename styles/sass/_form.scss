@@ -1,5 +1,6 @@
 $primary: #8f278f;
 $secondary: #808080;
+$tertiary: #E6E6FA;
 
 
 .contactFormContainer {
@@ -52,16 +53,15 @@ $secondary: #808080;
  #contactName,
  #contactEmail {
     border: none;
-    // border-bottom: 1px solid #86e0f9;
-    background:$primary;
+    background: #fff;
     padding: 0 5%;
     padding: 3%;
     width: 45%;
 }
 
 #contactComment {
-  // border: 1px solid #86e0f9;
-  background:$primary;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .contactFieldset {
@@ -69,8 +69,6 @@ $secondary: #808080;
 }
 
 .contactButton {
-  background: #0c1423;
-  border: 1px solid #0c1423;
   text-align: center;
   line-height: 32px;
   padding: 0.7rem;
@@ -87,25 +85,33 @@ $secondary: #808080;
  #contactName,
  #contactEmail {
     border: none;
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid #fff;
     width: 45%;
 }
 
 #contactComment {
-  border: 1px solid $primary;
+  border: 1px solid #fff;
   width: 100%;
 }
 
 .contactForm input,
 textarea {
-    color: white;
+    color: $primary;
     padding: 3%;
+    resize: none;
+}
+
+input#contactName,
+input#contactEmail,
+textarea#contactComment {
+    border-bottom: 2px solid $primary;
+
 }
 
 #contactName:focus-within,
 #contactEmail:focus-within,
 #contactComment:focus-within {
-  border: 2px solid #0c1423;
+  border: 2px solid $primary;
 }
 
 .submitButton p {
