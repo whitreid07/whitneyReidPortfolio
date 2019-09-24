@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  //TO SCROLL TO NEAREST SECTION
   $('.arrowContainer').click(function (event) {
     event.preventDefault();
     console.log('clicked!');
@@ -6,39 +8,30 @@ $(document).ready(function () {
       scrollTop: $('.headerContainer').offset().top + $('.headerContainer').height()
     }, 800);
   });
+
+  //TO SCROLL BACK TO TOP
   $('.arrowUpContainer').click(function (event) {
     event.preventDefault();
     console.log('clicked!');
     $('html, body').animate({ scrollTop: 0 }, 800);
   });
 
-  $(function () {
-    $(".menu").click(function () {
-      if ($("#navigation").hasClass("hidden")) {
-        $("#navigation").attr("class", "visible animated slideInLeft");
-      } else {
-        $("#navigation").attr("class", "hidden animated slideOutLeft");
-      }
-      $(this).toggleClass("open");
-    });
+  //SCROLL TO PROJECTS SECTION
+  $('.list1').click(function (event) {
+    event.preventDefault();
+    console.log('clicked!');
+    $('html, body').animate({
+      scrollTop: $('.headerContainer').offset().top + $('.headerContainer').height()
+    }, 800);
+  });
 
-    $("#navigation").click(function () {
-      if ($("#navigation").hasClass("visible")) {
-        $(".menu").toggleClass("open");
-      } else {
-      }
-      $(this).attr("class", "slideOutLeft hidden");
-    });
-
-    $(document).keyup(function (e) {
-      if (e.keyCode == 27) {
-        if ($("#navigation").hasClass("visible")) {
-          $(".menu").toggleClass("open");
-        } else {
-        }
-        $("#navigation").attr("class", "slideOutLeft hidden");
-      }
-    });
+  //SCROLL TO CONTACT SECTION
+  $('.list2').click(function (event) {
+    event.preventDefault();
+    console.log('clicked!');
+    $('html, body').animate({
+      scrollTop: $('.contactFormContainer').offset().top + $('.contactFormContainer').height()
+    }, 800);
   });
 })
 

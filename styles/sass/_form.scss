@@ -11,7 +11,7 @@ $tertiary: #E6E6FA;
 .contactFieldset {
   display: flex;
   flex-direction: column;
-  margin: 0 20%;
+  margin: 0 15%;
 }
 
 .contactFormCommentButton {
@@ -19,8 +19,9 @@ $tertiary: #E6E6FA;
   flex-direction: column;
 }
 
-.formContainer {
-  width: 80%;
+.email {
+  text-transform: lowercase;
+  font-weight: 700;
 }
 
 .formContents {
@@ -42,6 +43,7 @@ $tertiary: #E6E6FA;
   line-height: 1.3rem;
   font-family: 'Merriweather Sans', sans-serif;
   padding-bottom: 1rem;
+  color: #696969;
 }
 
 .contactParagraph2 {
@@ -49,10 +51,7 @@ $tertiary: #E6E6FA;
   line-height: 1.3rem;
   font-family: 'Merriweather Sans', sans-serif;
   padding-bottom: 2rem;
-}
-
-.formContents {
-  width: 87%;
+  color: #696969;
 }
 
 textarea {
@@ -147,5 +146,93 @@ textarea#contactComment {
       color: $primary;
       transition: all 0.3s;
     }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .contactFieldset {
+    margin: 0 10%;
+  }
+  .contactFormInput {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .contactFieldset {
+    margin: 0 7%;
+  }
+  input {
+      padding: 15% 0;
+  }
+
+  #contactName,
+  #contactEmail {
+    width: 100%;
+     margin: 5% 0;
+  }
+
+  .socialHandles {
+    margin: 15% 0;
+  }
+}
+
+@media only screen and (max-width: 551px){
+
+  .skillsToolkit {
+    display: none;
+  }
+  .contactParagraph1,
+  .contactParagraph2 {
+    font-size: 0.9rem;
+  }
+  .contactFormInput {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .contactFieldset {
+    margin: 0 7%;
+  }
+  input {
+      padding: 15% 0;
+  }
+
+  #contactName,
+  #contactEmail {
+    width: 100%;
+     margin: 5% 0;
+  }
+
+  .socialHandles {
+    margin: 15% 0;
+  }
+}
+
+@media only screen and (max-width: 360px){
+
+  p.eventsParagraph {
+    padding-left: 0%;
+  }
+
+  .contactFormInput {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .contactFieldset {
+    margin: 0 7%;
+  }
+  input {
+      padding: 15% 0;
+  }
+
+  #contactName,
+  #contactEmail {
+    width: 100%;
+     margin: 5% 0;
+  }
+
+  .socialHandles {
+    margin: 15% 0;
   }
 }

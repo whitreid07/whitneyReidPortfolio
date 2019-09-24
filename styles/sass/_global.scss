@@ -31,12 +31,12 @@ $tertiary: #ddbedd;
 }
 
  h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gravitas One', cursive;
   font-weight: 700;
   font-size: 4rem;
   text-transform: capitalize;
   width: 50%;
-  line-height: 4rem;
+  line-height: 5rem;
   margin-top: 15%;
 }
 
@@ -51,9 +51,10 @@ h2 {
 }
 
 h3 {
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
+  font-size: 1.5rem;
 }
 
 // p {

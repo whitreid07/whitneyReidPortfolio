@@ -15,8 +15,11 @@
   display: flex;
   flex-direction: row;
   padding: 1% 0;
+
   a {
     color: $secondary;
+      font-family: 'Montserrat', sans-serif;
+
   }
   a:hover{
     border-bottom: 3px solid $primary;
@@ -48,6 +51,99 @@ li {
 
 }
 
+//MENU STYLES
+
+.menu {
+  width: 33px;
+  height: 33px;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  right: 50px;
+  z-index: 1;
+  display: none;
+}
+
+.menu span {
+  cursor: pointer;
+  height: 2px;
+  width: 33px;
+  margin-bottom: 8px;
+  background: #000;
+  position: relative;
+  right: 0;
+  display: block;
+  transform: rotate(0deg);
+  transition: .7s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transition-delay: .5s;
+  pointer-events: none;
+  cursor: default;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.menu.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+  transition: .7s ease;
+  background: #fff;
+}
+
+.menu.open span:nth-child(2) {
+  opacity: 0;
+  right: 100px;
+  background: #fff;
+}
+
+.menu.open span:nth-child(3) {
+  top: -10px;
+  transform: rotate(-135deg);
+  transition: .7s ease;
+  background: #fff;
+}
+
+#navigation {
+  background: #64b5f6;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.slideInLeft {
+  animation-duration: .5s;
+}
+
+.slideOutLeft {
+  animation-duration: .5s;
+}
+
+.sectionHeading {
+  text-transform:  uppercase;
+  font-family: 'Gravitas One', cursive;
+  color: $secondary;
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+}
+
+
 .headerTitle {
   color: $secondary;
 }
@@ -55,13 +151,15 @@ li {
 .subHeader {
   color: $primary;
   padding: 1% 0;
+  text-transform: capitalize;
 }
 
 .headerParagraph {
   padding: 2% 0;
   width: 50%;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .headerIcons {
@@ -71,7 +169,7 @@ li {
   right: 0;
   bottom: 70px;
   padding-right: 1%;
-  
+  z-index: 10;
 }
 
 .headerIcons i {
@@ -160,6 +258,16 @@ li {
   }
 }
 
+@media only screen and (max-width: 1175px){
+
+  .navLinks {
+    display: none;
+  }
+  .arrowContainer {
+    margin-top: 25%;
+  }
+}
+
 @media only screen and (max-width: 1140px){
 
   h1 {
@@ -170,12 +278,11 @@ li {
 @media only screen and (max-width: 950px){
 
   .headerContainer {
-    // background-position: 65% 0px;
     background-image: url('../images/headerBackground950.png');
   }
 
   .headerContentsContainer {
-    margin-top: 10%;
+    padding-top: 10%;
   }
 
   h1 {
@@ -187,7 +294,6 @@ li {
   .subHeader {
     font-size: 1.2rem;
     width: 40%;
-    // border: 2px solid green; 
   }
 
   .headerParagraph {
@@ -195,7 +301,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 675px){
+@media only screen and (max-width: 767px){
 
   .innerWrapper {
     position: relative;
@@ -204,7 +310,6 @@ li {
   .headerContainer {
     background-image: url('../images/headerBackground674.png');
     background-position: 80% 0px;
-    height: 100vh;
   }
 
   .headerContentsContainer {
@@ -216,13 +321,17 @@ li {
   h1 {
     width: 100%;
     text-align: center;
+    padding: 0 1rem;
     padding-bottom: 2%;
+    font-size: 2rem;
+    margin-top: 7%;
+    line-height: 2rem;
   }
 
   .subHeader,
   .headerParagraph {
     width: 100%;
-    padding: 0 5%;
+    padding: 0 8%;
   }
 
   .subHeader {
@@ -231,15 +340,14 @@ li {
   }
 
   .headerParagraph {
-    padding-bottom: 5%;
+    padding-bottom: 0 5%;
+    font-size: 1rem;
+    text-align: left;
   }
 
   .headerContents {
     text-align: center;
   }
-}
-
-@media only screen and (max-width: 675px){
 
   .whitneyLogo {
     display: none;
@@ -249,28 +357,34 @@ li {
     background-position: 50% 0px;
   }
 
-   h1 {
-     font-size: 2rem;
-    margin-top: 7%;
-    line-height: 2rem;
-    padding: 0 1rem;
-  }
-
-  .headerParagraph {
-    font-size: 1rem;
-  }
-
   .arrowContainer {
-    display: none;
+    margin-top: 13%;
+  }
+
+  .zoltarSpeaksContents, 
+  .foodieAppContents, 
+  .eventsAppContents {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  h1 {
+    padding-bottom: 5%;
   }
 }
 
 @media only screen and (max-width: 457px){
   .headerContainer {
     background-image: url('../images/headerBackground457.png');
-    // background-position: 60% 0px;
   }
 
+}
+@media only screen and (max-width: px){ 
+  h1{
+    margin-top: 0;
+  }
 }
 
 @media only screen and (max-width: 355px){ 
