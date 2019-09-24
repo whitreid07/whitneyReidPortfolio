@@ -37,10 +37,18 @@ $tertiary: #E6E6FA;
   display: flex;
 }
 
-.contactParagraph {
+.contactParagraph1 {
   font-size: 1rem;
   line-height: 1.3rem;
   font-family: 'Merriweather Sans', sans-serif;
+  padding-bottom: 1rem;
+}
+
+.contactParagraph2 {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  padding-bottom: 2rem;
 }
 
 .formContents {
@@ -133,7 +141,7 @@ textarea#contactComment {
 
   i {
     font-size: 1.5rem;
-    padding:2rem;
+    margin: 0 2rem;
     color: $secondary;
     &:hover {
       color: $primary;

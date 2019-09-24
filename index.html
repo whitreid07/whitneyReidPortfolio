@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <div class="wrapper">
     <div class="menu">
       <span></span>
@@ -25,19 +24,19 @@
     <!-- HEADER STARTS -->
     <header class="headerContainer">
       <div class="innerWrapper">
-        <div class="logoContainer">
-          <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
-        </div>
-        <div id="navigation" class="hidden">
-          <!-- NAV STARTS -->
-          <nav class="navLinks">
-            <ul>
-              <li><a href="index.html">home</a></li>
-              <li><a href="#projects">projects</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-          </nav> <!-- End of nav-->
-        </div>
+        <!-- <div id="navigation" class="hidden"> -->
+        <!-- NAV STARTS -->
+        <nav class="navLinks">
+          <div class="logoContainer">
+            <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
+          </div>
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav> <!-- End of nav-->
+        <!-- </div> -->
         <div class="headerContentsContainer">
           <div class="headerTitle">
             <h1>hello there, I'm Whitney!</h1>
@@ -48,7 +47,7 @@
               building engaging web applications to capivate the best user experience using HTML, CSS, JavaScript and
               React! </p>
           </div>
-          <div class="arrowContainer">
+          <div class="arrowContainer bounce">
             <i class="fas fa-angle-double-down" aria-hidden="true"></i>
             <span class="sr-only">Arrow down icon</span>
           </div>
@@ -195,10 +194,9 @@
         <div class="innerWrapper">
           <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
             <fieldset class="contactFieldset">
-              <p class="contactParagraph">I would love to hear from you! If you would like to collobrate on a cool idea
-                or
-                just want to grab a coffee
-                to talk about tech send me a note!</p>
+              <p class="contactParagraph1">I would love to hear from you! If you would like to collobrate on a cool idea
+                or just want to grab a coffee to talk about tech send me a note!</p>
+              <p class="contactParagraph2">Use the form below or directly to whitney.reid.designs@gmail.com</p>
 
               <div class="contactFormInput">
                 <label for="text" class="visuallyHidden">Type your name</label>
@@ -216,7 +214,10 @@
             </fieldset>
           </form>
           <div class="socialHandles">
-            <i class="fab fa-linkedin-in"></i>
+            <a href="https://www.linkedin.com/in/whitney-reid-49282041" target="true"><i class="fab fa-linkedin-in"
+                aria-hidden="true"></i>
+              <span class="sr-only">LinkedIn Icon</span>
+            </a>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-github"></i>
           </div>
