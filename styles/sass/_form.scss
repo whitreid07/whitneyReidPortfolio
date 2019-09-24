@@ -11,7 +11,7 @@ $tertiary: #E6E6FA;
 .contactFieldset {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  margin: 0 20%;
 }
 
 .contactFormCommentButton {
@@ -19,11 +19,8 @@ $tertiary: #E6E6FA;
   flex-direction: column;
 }
 
-// FORM STYLES
-
 .formContainer {
   width: 80%;
-  margin-top: -14%;
 }
 
 .formContents {
@@ -50,6 +47,10 @@ $tertiary: #E6E6FA;
   width: 87%;
 }
 
+textarea {
+  height: 250px;
+}
+
  #contactName,
  #contactEmail {
     border: none;
@@ -66,6 +67,8 @@ $tertiary: #E6E6FA;
 
 .contactFieldset {
   border: none;
+  margin-top: 0;
+  padding: 0;
 }
 
 .contactButton {
@@ -75,7 +78,6 @@ $tertiary: #E6E6FA;
   font-size: 1rem;
   margin: 0;
 }
-
 
 .contactFormCommentButton {
   display: flex;
@@ -120,6 +122,22 @@ textarea#contactComment {
 }
 
 .submitButtonContainer {
-    margin: 3% 0;
+    margin: 7% 0;
 
+}
+
+.socialHandles {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+
+  i {
+    font-size: 1.5rem;
+    padding:2rem;
+    color: $secondary;
+    &:hover {
+      color: $primary;
+      transition: all 0.3s;
+    }
+  }
 }

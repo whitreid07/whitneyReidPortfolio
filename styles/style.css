@@ -249,7 +249,7 @@ a {
 }
 
 a:hover {
-  color: #696969;
+  color: #fff;
 }
 
 a:visted {
@@ -261,22 +261,56 @@ a:focus {
 }
 
 button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
   background: #8f278f;
-  border: 1px solid #8f278f;
-  color: #fff;
-  border-radius: 1rem;
-  font-size: 1rem;
-  padding: 0.7rem 1rem;
-  text-transform: capitalize;
-  margin-right: 2%;
+  border: 2px solid #8f278f;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-button:hover {
-  background: #ddbedd;
-  border: 1px solid #ddbedd;
-  color: #696969;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+button::after {
+  content: '';
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  -webkit-transform: translate3d(-525%, 0, 0) rotate(35deg);
+          transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+
+button:hover::after {
+  -webkit-transition: -webkit-transform 0.45s ease-in-out;
+  transition: -webkit-transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
+  -webkit-transform: translate3d(200%, 0, 0) rotate(35deg);
+          transform: translate3d(200%, 0, 0) rotate(35deg);
+  color: #fff;
+}
+
+label {
+  top: 2px;
+  right: 100%;
+  width: 100%;
+  margin-right: -100%;
+  bottom: 2px;
+}
+
+input:focus + label, textarea:focus + label {
+  right: 0;
+  margin-right: 0;
+  width: 40%;
+  padding-top: 5px;
 }
 
 input {
@@ -289,12 +323,6 @@ span {
 
 fieldset {
   border: none;
-}
-
-footer p {
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 1%;
 }
 
 :focus {
@@ -311,6 +339,12 @@ footer p {
   max-width: 1280px;
   margin: 0 auto;
   height: 100%;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1%;
 }
 
 .headerContainer {
@@ -404,8 +438,9 @@ li {
 }
 
 .headerIcons i {
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: #8f278f;
+  padding: 0% 15px;
 }
 
 .headerIcons i:hover {
@@ -416,6 +451,8 @@ li {
 
 .arrowContainer {
   text-align: center;
+  margin-top: 13%;
+  color: #8f278f;
 }
 
 .arrowContainer i {
@@ -423,7 +460,7 @@ li {
 }
 
 .arrowContainer:hover {
-  color: #8f278f;
+  color: #696969;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -435,6 +472,9 @@ li {
 }
 
 @media only screen and (max-width: 1305px) {
+  .logoContainer {
+    padding-left: 3%;
+  }
   h1 {
     font-size: 3rem;
     text-transform: capitalize;
@@ -518,19 +558,26 @@ li {
   .headerContents {
     text-align: center;
   }
-  .iconSection,
-  .contactFormContainer,
-  footer {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 675px) {
+  .whitneyLogo {
+    display: none;
+  }
   .headerContainer {
     background-position: 50% 0px;
   }
   h1 {
+    font-size: 2rem;
     margin-top: 7%;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+  .headerParagraph {
+    font-size: 1rem;
+  }
+  .arrowContainer {
+    display: none;
   }
 }
 
@@ -554,6 +601,101 @@ li {
     text-align: left;
     padding: 7%;
   }
+}
+
+.menu {
+  width: 33px;
+  height: 33px;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  right: 50px;
+  z-index: 1;
+}
+
+.menu span {
+  cursor: pointer;
+  height: 2px;
+  width: 33px;
+  margin-bottom: 8px;
+  background: #000;
+  position: relative;
+  right: 0;
+  display: block;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.hidden {
+  opacity: 0;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  pointer-events: none;
+  cursor: default;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.menu.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+  background: #fff;
+}
+
+.menu.open span:nth-child(2) {
+  opacity: 0;
+  right: 100px;
+  background: #fff;
+}
+
+.menu.open span:nth-child(3) {
+  top: -10px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+  background: #fff;
+}
+
+#navigation {
+  background: #64b5f6;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slideInLeft {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.slideOutLeft {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 
 .sectionHeading h2 {
@@ -600,6 +742,10 @@ li {
   margin-left: 5%;
 }
 
+.foodieAppContents {
+  padding-right: 8%;
+}
+
 .zoltarImageContainer,
 .foodieAppImageContainer,
 .eventsAppImageContainer {
@@ -642,6 +788,28 @@ li {
 
 .contactFormContainer {
   padding: 5% 0;
+}
+
+.contactFieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5% 0;
+}
+
+.footerIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  color: #000;
 }
 
 footer {
@@ -711,7 +879,6 @@ footer {
 @media only screen and (max-width: 1285px) {
   .iconGrouping {
     margin: 0px 15%;
-    border: 2px solid red;
   }
 }
 
@@ -829,7 +996,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  margin: 0 20%;
 }
 
 .contactFormCommentButton {
@@ -844,7 +1011,6 @@ footer {
 
 .formContainer {
   width: 80%;
-  margin-top: -14%;
 }
 
 .formContents {
@@ -877,6 +1043,10 @@ footer {
   width: 87%;
 }
 
+textarea {
+  height: 250px;
+}
+
 #contactName,
 #contactEmail {
   border: none;
@@ -893,6 +1063,8 @@ footer {
 
 .contactFieldset {
   border: none;
+  margin-top: 0;
+  padding: 0;
 }
 
 .contactButton {
@@ -950,5 +1122,27 @@ textarea#contactComment {
 }
 
 .submitButtonContainer {
-  margin: 3% 0;
+  margin: 7% 0;
+}
+
+.socialHandles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0;
+}
+
+.socialHandles i {
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: #808080;
+}
+
+.socialHandles i:hover {
+  color: #8f278f;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }

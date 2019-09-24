@@ -2,6 +2,89 @@ $primary: #8f278f;
 $secondary: #808080;
 $tertiary: #E6E6FA;
 
+//MENU STYLES
+
+.menu {
+  width: 33px;
+  height: 33px;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  right: 50px;
+  z-index: 1;
+}
+
+.menu span {
+  cursor: pointer;
+  height: 2px;
+  width: 33px;
+  margin-bottom: 8px;
+  background: #000;
+  position: relative;
+  right: 0;
+  display: block;
+  transform: rotate(0deg);
+  transition: .7s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transition-delay: .5s;
+  pointer-events: none;
+  cursor: default;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.menu.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+  transition: .7s ease;
+  background: #fff;
+}
+
+.menu.open span:nth-child(2) {
+  opacity: 0;
+  right: 100px;
+  background: #fff;
+}
+
+.menu.open span:nth-child(3) {
+  top: -10px;
+  transform: rotate(-135deg);
+  transition: .7s ease;
+  background: #fff;
+}
+
+#navigation {
+  background: #64b5f6;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.slideInLeft {
+  animation-duration: .5s;
+}
+
+.slideOutLeft {
+  animation-duration: .5s;
+}
+
 .sectionHeading h2 {
   text-transform: capitalize;
   font-family: 'Merriweather Sans', sans-serif;
@@ -39,6 +122,10 @@ $tertiary: #E6E6FA;
   width: 50%;
   padding-right: 5%;
   margin-left: 5%
+}
+
+.foodieAppContents {
+  padding-right: 8%;
 }
 
 .zoltarImageContainer,
@@ -82,6 +169,21 @@ $tertiary: #E6E6FA;
 .contactFormContainer {
   padding: 5% 0;
 }
+
+.contactFieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.footerIcons {
+  display: flex;
+  font-size: 2rem;
+  color: #000;
+}
+
+//FOOTER STYLES
 
 footer {
   color: #fff;
@@ -162,15 +264,7 @@ footer {
 @media only screen and (max-width: 1285px){
   .iconGrouping {
     margin: 0px 15%;
-    border: 2px solid red;
   }
-}
-
-@media only screen and (max-width: 1270px){
-
-  // .iconGrouping {
-  //   margin: 0px 11%;
-  // }
 }
 
 @media only screen and (max-width: 1205px){
@@ -194,20 +288,7 @@ footer {
   // }
 }
 
-@media only screen and (max-width: 1065px){
-
-  // .iconGrouping {
-  //   margin: 0 5%;
-  // }
-}
-
-
 @media only screen and (max-width: 1030px){
-
-  // .skillsToolkit {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
 
   .iconGroupOne,
   .iconGroupTwo {
@@ -216,13 +297,6 @@ footer {
     justify-content: none;
     display: inline-flex;
   }
-}
-
-@media only screen and (max-width: 1026px){
-
-  // .iconGrouping {
-  //   margin: 0 7vw;
-  // }
 }
 
 @media only screen and (max-width: 896px){
@@ -242,45 +316,6 @@ footer {
     margin: 3% 0;
     font-size: 0.9rem;
   }
-}
-
-@media only screen and (max-width: 836px){
-
-  // .iconGrouping {
-  //   margin: 0 25vw;
-  // }
-
-  // i {
-  //   font-size: 5rem;
-  //   margin: 0 15%;
-  // }
-
-}
-
-@media only screen and (max-width: 824px){
-
-  // .iconGrouping {
-  //   margin: 0 17vw;
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
-}
-
-@media only screen and (max-width: 758px){
-
-  // .iconContainer{
-  //   margin: 0 5%;
-  //   display: block;
-  //   justify-content: none;
-
-  // }
-
-  // .jQueryLogo img,
-  // .w3cLogo img {
-  //   width: 116px;
-  //   border: 2px solid red;
-  // }
-
 }
 
 @media only screen and (max-width: 767px){
@@ -340,46 +375,4 @@ footer {
     margin: 0;
     padding-top: 3%;
   }
-}
-
-@media only screen and (max-width: 509px){
-
-  // .iconGrouping {
-  //   margin: 0 25vw;
-  //   border: 2px solid purple;
-  // }
-
-  // i {
-  //   font-size: 5rem;
-  //   margin: 0 15%;
-  // }
-
-  // .jQueryLogo img,
-  // .fireBaseLogo img,
-  // .w3cLogo img,
-  // .vsCodeLogo img,
-  // .responsiveLogo img {
-  //   width: 21vw;
-  // }
-}
-
-@media only screen and (max-width: 355px){
-
-  // .iconGrouping {
-  //   margin: 0 20vw;
-  //   border: 2px solid purple;
-  // }
-
-  // i {
-  //   font-size: 4rem;
-  //   margin: 0 15%;
-  // }
-
-  // .jQueryLogo img,
-  // .fireBaseLogo img,
-  // .w3cLogo img,
-  // .vsCodeLogo img,
-  // .responsiveLogo img {
-  //   width: 21vw;
-  // }
 }

@@ -70,9 +70,10 @@ li {
 }
 
 .headerIcons i {
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: $primary;
-
+  padding: 0% 15px;
+  
   &:hover {
     color: $secondary;
     transition: all 0.3s;
@@ -81,11 +82,13 @@ li {
 
 .arrowContainer  {
   text-align: center;
+  margin-top: 13%;
+  color: $primary;
   i {
     font-size: 2rem;
   }
   &:hover {
-    color: $primary;
+    color: $secondary;
     transition: all 0.3s;
   }
 }
@@ -102,16 +105,15 @@ li {
 
 @media only screen and (max-width: 1305px){
 
-
+  .logoContainer {
+    padding-left: 3%;
+  }
 
   h1 {
     font-size: 3rem;
     text-transform: capitalize;
-    // width: 35%;
     line-height: 3rem;
     padding-left: 3%;
-    // white-space: nowrap;
-    // border: 2px solid green;
   }
 
   .subHeader,
@@ -167,7 +169,6 @@ li {
 
 @media only screen and (max-width: 675px){
 
-  
   .innerWrapper {
     position: relative;
   }
@@ -176,14 +177,10 @@ li {
     background-image: url('../images/headerBackground674.png');
     background-position: 80% 0px;
     height: 100vh;
-    // border: 2px solid green;
   }
 
   .headerContentsContainer {
     display: flex;
-    // flex-direction: row;
-    // width: 100%;
-    // border: 2px solid red;
     position: absolute;
     top: 45%;
   }
@@ -212,24 +209,31 @@ li {
   .headerContents {
     text-align: center;
   }
-
-  
-  .iconSection,
-  .contactFormContainer,
-  footer{
-    display: none;
-
-  }
 }
 
 @media only screen and (max-width: 675px){
+
+  .whitneyLogo {
+    display: none;
+  }
   
   .headerContainer {
     background-position: 50% 0px;
   }
 
    h1 {
+     font-size: 2rem;
     margin-top: 7%;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+
+  .headerParagraph {
+    font-size: 1rem;
+  }
+
+  .arrowContainer {
+    display: none;
   }
 }
 
