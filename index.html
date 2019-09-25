@@ -30,12 +30,11 @@
             <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
           </div>
           <ul>
-            <!-- <li class="list1"><a href="index.html">home</a></li> -->
             <li class="list1"><a href="#projects">portfolio</a></li>
-            <li class="list2"><a href="#contact">contact</a></li>
+            <li class="list2"><a href="#skills">skills</a></li>
+            <li class="list3"><a href="#contact">contact</a></li>
           </ul>
         </nav> <!-- End of nav-->
-        <!-- </div> -->
         <div class="headerContentsContainer">
           <div class="headerTitle">
             <h1>hello, I'm Whitney!</h1>
@@ -43,8 +42,11 @@
           </div>
           <div class="headerContents">
             <p class="headerParagraph">I'm more than meets the eye! I have a background in design and have a passion in
-              building engaging web applications to capivate the best user experience using HTML, CSS, JavaScript and
-              React! </p>
+              building accessible, functional and eye-catching web applications to capivate the best user
+              experience using HTML, CSS, JavaScript and React! Challenging myself is what I strive for - bringing ideas
+              to life from concept to final product is
+              so rewarding! <a href="#contact"><span class="connect">Lets connect!</span></p></a>
+
           </div>
           <div class="arrowContainer bounce">
             <i class="fas fa-angle-double-down" aria-hidden="true"></i>
@@ -53,7 +55,7 @@
         </div>
       </div>
       <div class="headerIcons">
-        <div class="arrowUpContainer">
+        <div class="arrowUpContainer scrollToTop">
           <span><i class="fas fa-arrow-circle-up" aria-hidden="true"></i></span>
           <span class="sr-only">Up arrow Icon</span>
         </div>
@@ -70,8 +72,8 @@
               <h3 class="zoltarHeading">Zoltar Speaks</h3>
               <p class="zoltarParagraph">Want some useful advice? Zoltar can help! Ask a wish and navigate your coin
                 through a maze full of
-                challenges to get your wish granted. A mob programming project.</p>
-              <p class="projectSkills">react | rest api | html5 | sass</p>
+                challenges to get your wish granted. A mob programming project.
+                <span class="skills">react | rest api | html5 | sass</span></p>
               <div class="zoltarSpeaksButtonContainer">
                 <button><a href="https://zoltar-speaks.firebaseapp.com/" target="_blank">View Live</button>
                 <button> <a href="https://github.com/groupThreeProjectSix/zoltarSpeaks" target="_blank">View
@@ -79,7 +81,8 @@
               </div>
             </div>
             <div class="zoltarImageContainer">
-              <img src="images/zoltarSpeaksMockUp.png" alt="zoltar speaks mockup">
+              <a href="https://zoltar-speaks.firebaseapp.com/" target="_blank"><img src="images/zoltarSpeaksMockUp.png"
+                  alt="zoltar speaks mockup"></a>
             </div>
           </div>
         </div>
@@ -90,16 +93,17 @@
         <div class="innerWrapper">
           <div class="foodieAppContainer">
             <div class="foodieAppImageContainer">
-              <img src="images/foodieAppMockup.png" alt="foodie mockup">
+              <a href="https://whitreid07.github.io/whitneyReidProjectFive/" target="_blank"><img
+                  src="images/foodieAppMockup.png" alt="foodie mockup"></a>
             </div>
             <div class="foodieAppContents">
               <h3 class="foodieHeading">Foodie App</h3>
               <p class="foodieParagraph">Not sure what to make for dinner? Foodie has you covered. Enter an ingredient
                 to
                 get 6 recipes. Based-off
-                the recipe you choose you have the tools to get started.</p>
-              <p class="projectSkills">react | rest api | html5 | sass
-                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                the recipe you choose you have the tools to get started.
+                <span class="skills">react | rest api | html5 | sass</span></p>
+              <meta name='viewport' content='width=device-width, initial-scale=1'>
               </p>
               <div class="foodieAppButtonContainer">
                 <button><a href="https://whitreid07.github.io/whitneyReidProjectFive/" target="_blank">View
@@ -119,8 +123,9 @@
               <h3 class="eventsHeading">Events App</h3>
               <p class="eventsParagraph">Are you looking for something fun to do in your city? Check out this events app
                 where you select your city,
-                type of event and specific date to see what's happening! A pair programming project.</p>
-              <p calss="projectSkills">javascript | jquery | rest api</p>
+                type of event and specific date to see what's happening! A pair programming project. <span
+                  class="skills">javascript |
+                  jquery | rest api</span></p>
               <div class="eventsAppButtonContainer">
                 <button><a href="https://norrewhitneyprojectfour.github.io/whitneyNorreProjectFour/"
                     target="_blank">View
@@ -131,14 +136,15 @@
               </div>
             </div>
             <div class="eventsAppImageContainer">
-              <img src="images/eventsAppMockup.png" alt="events mockup">
+              <a href="https://norrewhitneyprojectfour.github.io/whitneyNorreProjectFour/" target="_blank"><img
+                  src="images/eventsAppMockup.png" alt="events mockup"></a>
             </div>
           </div>
       </section>
 
       <!-- SKILLS &TOOLKIT -->
-      <section class="skillsToolkit">
-        <h2 class="sectionHeading" id="projects">skills i know</h2>
+      <section class="skillsToolkit skillsHeading">
+        <h2 class="sectionHeading" id="skills">my skills</h2>
 
         <div class="iconGrouping">
           <div class="gridItem gridItem1">
@@ -192,8 +198,8 @@
       </section>
 
       <!-- CONTACT FORM  -->
-      <div class="contactFormContainer" id="contact">
-        <h2 class="sectionHeading">get in touch</h2>
+      <div class="contactFormContainer">
+        <h2 class="sectionHeading" id="contact">get in touch</h2>
         <div class="innerWrapper">
           <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
             <fieldset class="contactFieldset">
@@ -211,7 +217,7 @@
               </div>
               <div class="contactFormCommentButton">
                 <label for="text" class="visuallyHidden">Type your message</label>
-                <textarea rows="10" cols="50" id="contactComment" required=required placeholder="Message*"></textarea>
+                <textarea rows="" cols="" id="contactComment" required=required placeholder="Message*"></textarea>
                 <div class="submitButtonContainer">
                   <button>send email</button>
                 </div>
@@ -222,8 +228,14 @@
                 aria-hidden="true"></i>
               <span class="sr-only">LinkedIn Icon</span>
             </a>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-github"></i>
+            <div class="twitterContainer">
+              <i class="fab fa-twitter"></i>
+              <span class="sr-only">Twitter Icon</span>
+            </div>
+            <div class="githubContainer">
+              <i class="fab fa-github"></i>
+              <span class="sr-only">Github Icon</span>
+            </div>
           </div>
         </div>
       </div>

@@ -11,6 +11,14 @@ $tertiary: #E6E6FA;
   padding: 5% 0;
 }
 
+.skills {
+  display: block;
+  margin-top: 5%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $secondary;
+}
+
 .zoltarSpeaksContents p,
 .foodieAppContents p,
 .eventsAppContents p {
@@ -21,14 +29,18 @@ $tertiary: #E6E6FA;
   padding-top: 5%;
 }
 
+.zoltarSpeaksContents p {
+  padding-right: 7%;
+}
+
+.foodieAppContents p {
+  padding-right: 11%;
+}
+
 .zoltarSpeaksContainer,
 .foodieAppContainer,
 .eventsAppContainer {
   display: flex;
-}
-
-.zoltarSpeaksContainer {
-  margin-top: 5%;
 }
 
  .zoltarHeading,
@@ -50,11 +62,7 @@ $tertiary: #E6E6FA;
   width: 50%;
   padding-right: 5%;
   margin-left: 5%
-}
-
-.foodieAppContents {
-  padding-right: 8%;
-}
+} 
 
 .zoltarImageContainer,
 .foodieAppImageContainer,
@@ -62,15 +70,10 @@ $tertiary: #E6E6FA;
   width: 50%;
 }
 
-.zoltarImageContainer,
-.eventsAppImageContainer {
-  margin:  0 5% ;
-}
-
 //TOOLKIT
 
 .skillsToolkit {
-  padding: 7% 0;
+  padding: 8% 0;
 }
 
 .iconGrouping {
@@ -78,10 +81,10 @@ $tertiary: #E6E6FA;
   -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
   grid-gap: 40px;
-  margin: 0px 12%;
+  margin: 10% 12%;
   img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -98,31 +101,16 @@ $tertiary: #E6E6FA;
   border: none;
 
   img:hover {
-    cursor: pointer;
-    animation: jelly 0.5s;
-  }
-}
-
-@keyframes jelly {
-  0%,
-  100% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-  75% {
-    transform: scale(0.95, 1.05);
+    // cursor: pointer;
+    // animation: jelly 0.5s;
   }
 }
 
 //FORM STYLES
 
 .contactFormContainer {
-  padding: 5% 0;
+    padding-top: 5%;
+    padding-bottom: 2%;
 }
 
 .contactFieldset {
@@ -145,26 +133,29 @@ footer {
   background: $secondary;
 }
 
+.footerParagraph p {
+  color: #fff;
+}
 //MEDIA QUERIES
 
 @media only screen and (max-width: 1622px){
 
  .iconGrouping {
-    margin: 0px 11%;
+    margin:  11%;
   }
 }
 
 @media only screen and (max-width: 1585px){
 
   .iconGrouping {
-    margin: 0px 9%;
+    margin: 8% 9%;
   }
 }
 
-@media only screen and (max-width: 1475px){
+@media only screen and (max-width: 1477px){
 
   .iconGrouping {
-    margin: 0px 7%;
+    margin: 8% 7%;
   }
 }
 
@@ -185,7 +176,7 @@ footer {
 @media only screen and (max-width: 1383px){
 
   .iconGrouping {
-    margin: 0px 5%;
+    margin: 8% 5%;
   }
 }
 
@@ -205,7 +196,7 @@ footer {
   }
 
   .iconGrouping {
-    margin: 0px 4%;
+    margin: 8% 4%;
   }
 
 }
@@ -218,35 +209,14 @@ footer {
 
 @media only screen and (max-width: 1315px){
   .iconGrouping {
-    margin: 0px 2%;
+    margin: 8% 2%;
   }
 }
 
-@media only screen and (max-width: 1285px){
+@media only screen and (max-width: 1289px){
   .iconGrouping {
     margin: 0px 15%;
   }
-}
-
-@media only screen and (max-width: 1205px){
-
-  // .iconGrouping {
-  //   margin: 0px 9%;
-  // }
-}
-
-@media only screen and (max-width: 1146px){
-
-  // .iconGrouping {
-  //   margin: 0px 7%;
-  // }
-}
-
-@media only screen and (max-width: 1092px){
-
-  // .iconGrouping {
-  //   margin: 0 6%;
-  // }
 }
 
 @media only screen and (max-width: 1030px){
@@ -400,5 +370,25 @@ footer {
 
   .contactFieldset {
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .skills {
+    font-size: 0.9rem;
+  }
+
+  .foodieAppButtonContainer {
+    margin: 0%;
+  }
+
+  .sectionHeading {
+    font-size: 1.2rem;
+    padding: 10% 0;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+    padding: 5% 0;
   }
 }

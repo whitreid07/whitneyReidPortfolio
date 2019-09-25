@@ -22,7 +22,7 @@
 
   }
   a:hover{
-    border-bottom: 3px solid $primary;
+    border-bottom: 3px dotted $primary;
   }
 }
 
@@ -51,90 +51,6 @@ li {
 
 }
 
-//MENU STYLES
-
-.menu {
-  width: 33px;
-  height: 33px;
-  padding: 5px;
-  display: block;
-  cursor: pointer;
-  position: relative;
-  float: right;
-  right: 50px;
-  z-index: 1;
-  display: none;
-}
-
-.menu span {
-  cursor: pointer;
-  height: 2px;
-  width: 33px;
-  margin-bottom: 8px;
-  background: #000;
-  position: relative;
-  right: 0;
-  display: block;
-  transform: rotate(0deg);
-  transition: .7s ease;
-}
-
-.hidden {
-  opacity: 0;
-  transition-delay: .5s;
-  pointer-events: none;
-  cursor: default;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.menu.open span:nth-child(1) {
-  top: 10px;
-  transform: rotate(135deg);
-  transition: .7s ease;
-  background: #fff;
-}
-
-.menu.open span:nth-child(2) {
-  opacity: 0;
-  right: 100px;
-  background: #fff;
-}
-
-.menu.open span:nth-child(3) {
-  top: -10px;
-  transform: rotate(-135deg);
-  transition: .7s ease;
-  background: #fff;
-}
-
-#navigation {
-  background: #64b5f6;
-  font-family: 'Merriweather', serif;
-  color: #fff;
-  font-weight: 400;
-  font-size: 40px;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.nav {
-  display: flex;
-  justify-content: center;
-}
-
-.slideInLeft {
-  animation-duration: .5s;
-}
-
-.slideOutLeft {
-  animation-duration: .5s;
-}
-
 .sectionHeading {
   text-transform:  uppercase;
   font-family: 'Gravitas One', cursive;
@@ -142,7 +58,6 @@ li {
   font-size: 1.7rem;
   letter-spacing: 0.2rem;
 }
-
 
 .headerTitle {
   color: $secondary;
@@ -156,10 +71,16 @@ li {
 
 .headerParagraph {
   padding: 2% 0;
-  width: 50%;
+  width: 48%;
   line-height: 1.5rem;
   color: #333;
   font-family: 'Montserrat', sans-serif;
+}
+
+.connect {
+  color: $primary;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .headerIcons {
@@ -176,6 +97,7 @@ li {
   font-size: 2rem;
   color: $primary;
   padding: 0% 15px;
+  cursor: pointer;
   
   &:hover {
     color: $secondary;
@@ -185,8 +107,9 @@ li {
 
 .arrowContainer  {
   text-align: center;
-  margin-top: 11%;
+  margin-top: 3%;
   color: $primary;
+  cursor: pointer;
   i {
     font-size: 2rem;
   }

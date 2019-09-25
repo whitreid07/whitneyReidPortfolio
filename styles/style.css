@@ -198,15 +198,6 @@ img {
   width: 100%;
 }
 
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-a:focus {
-  outline: 3px solid #86e0f9;
-}
-
 ul {
   list-style-type: none;
 }
@@ -243,6 +234,7 @@ a {
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 a:hover {
@@ -254,7 +246,7 @@ a:visted {
 }
 
 a:focus {
-  outline: 3px solid #86e0f9;
+  outline: 3px solid #8f278f;
 }
 
 button {
@@ -266,41 +258,52 @@ button {
   padding: 0.5em 1em;
   outline: none;
   border: none;
+  background-color: #2d3058;
+  overflow: hidden;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  border: none;
   background: #8f278f;
   border: 2px solid #8f278f;
   border-radius: 0.5rem;
-  overflow: hidden;
   cursor: pointer;
 }
 
-button::after {
+button::before {
   content: '';
   z-index: -1;
-  background-color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: -50%;
-  bottom: -50%;
-  width: 1.25em;
-  -webkit-transform: translate3d(-525%, 0, 0) rotate(35deg);
-          transform: translate3d(-525%, 0, 0) rotate(35deg);
-}
-
-button:hover::after {
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #696969;
+  border: 2px solid #696969;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+          transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
   -webkit-transition: -webkit-transform 0.45s ease-in-out;
   transition: -webkit-transform 0.45s ease-in-out;
   transition: transform 0.45s ease-in-out;
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
-  -webkit-transform: translate3d(200%, 0, 0) rotate(35deg);
-          transform: translate3d(200%, 0, 0) rotate(35deg);
-  color: #fff;
+  border: 2px solid #8f278f;
+}
+
+button:hover {
+  cursor: pointer;
+  color: fff;
+  border: 2px solid #696969;
+}
+
+button:hover::before {
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+          transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
 input {
   border-bottom: 1px solid #8f278f;
-}
-
-span {
-  text-transform: uppercase;
 }
 
 fieldset {
@@ -308,8 +311,7 @@ fieldset {
 }
 
 :focus {
-  outline: 3px solid #86e0f9;
-  border-radius: 1rem;
+  outline: 2px solid #696969;
 }
 
 .wrapper {
@@ -364,7 +366,7 @@ footer p {
 }
 
 .navLinks a:hover {
-  border-bottom: 3px solid #8f278f;
+  border-bottom: 3px dotted #8f278f;
 }
 
 nav li:first-child {
@@ -395,102 +397,6 @@ li {
   padding-top: 3%;
 }
 
-.menu {
-  width: 33px;
-  height: 33px;
-  padding: 5px;
-  display: block;
-  cursor: pointer;
-  position: relative;
-  float: right;
-  right: 50px;
-  z-index: 1;
-  display: none;
-}
-
-.menu span {
-  cursor: pointer;
-  height: 2px;
-  width: 33px;
-  margin-bottom: 8px;
-  background: #000;
-  position: relative;
-  right: 0;
-  display: block;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
-}
-
-.hidden {
-  opacity: 0;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-  pointer-events: none;
-  cursor: default;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.menu.open span:nth-child(1) {
-  top: 10px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
-  background: #fff;
-}
-
-.menu.open span:nth-child(2) {
-  opacity: 0;
-  right: 100px;
-  background: #fff;
-}
-
-.menu.open span:nth-child(3) {
-  top: -10px;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
-  background: #fff;
-}
-
-#navigation {
-  background: #64b5f6;
-  font-family: 'Merriweather', serif;
-  color: #fff;
-  font-weight: 400;
-  font-size: 40px;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.slideInLeft {
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-}
-
-.slideOutLeft {
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-}
-
 .sectionHeading {
   text-transform: uppercase;
   font-family: 'Gravitas One', cursive;
@@ -511,10 +417,16 @@ li {
 
 .headerParagraph {
   padding: 2% 0;
-  width: 50%;
+  width: 48%;
   line-height: 1.5rem;
   color: #333;
   font-family: 'Montserrat', sans-serif;
+}
+
+.connect {
+  color: #8f278f;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .headerIcons {
@@ -536,6 +448,7 @@ li {
   font-size: 2rem;
   color: #8f278f;
   padding: 0% 15px;
+  cursor: pointer;
 }
 
 .headerIcons i:hover {
@@ -546,8 +459,9 @@ li {
 
 .arrowContainer {
   text-align: center;
-  margin-top: 11%;
+  margin-top: 3%;
   color: #8f278f;
+  cursor: pointer;
 }
 
 .arrowContainer i {
@@ -767,6 +681,14 @@ li {
   padding: 5% 0;
 }
 
+.skills {
+  display: block;
+  margin-top: 5%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #808080;
+}
+
 .zoltarSpeaksContents p,
 .foodieAppContents p,
 .eventsAppContents p {
@@ -777,16 +699,20 @@ li {
   padding-top: 5%;
 }
 
+.zoltarSpeaksContents p {
+  padding-right: 7%;
+}
+
+.foodieAppContents p {
+  padding-right: 11%;
+}
+
 .zoltarSpeaksContainer,
 .foodieAppContainer,
 .eventsAppContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.zoltarSpeaksContainer {
-  margin-top: 5%;
 }
 
 .zoltarHeading,
@@ -815,23 +741,14 @@ li {
   margin-left: 5%;
 }
 
-.foodieAppContents {
-  padding-right: 8%;
-}
-
 .zoltarImageContainer,
 .foodieAppImageContainer,
 .eventsAppImageContainer {
   width: 50%;
 }
 
-.zoltarImageContainer,
-.eventsAppImageContainer {
-  margin: 0 5%;
-}
-
 .skillsToolkit {
-  padding: 7% 0;
+  padding: 8% 0;
 }
 
 .iconGrouping {
@@ -840,12 +757,12 @@ li {
   -ms-grid-columns: minmax(100px, 1fr) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
   grid-gap: 40px;
-  margin: 0px 12%;
+  margin: 10% 12%;
 }
 
 .iconGrouping img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 }
 
 .gridItem {
@@ -866,54 +783,9 @@ li {
   border: none;
 }
 
-.gridItem img:hover {
-  cursor: pointer;
-  -webkit-animation: jelly 0.5s;
-          animation: jelly 0.5s;
-}
-
-@-webkit-keyframes jelly {
-  0%,
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  25% {
-    -webkit-transform: scale(0.9, 1.1);
-            transform: scale(0.9, 1.1);
-  }
-  50% {
-    -webkit-transform: scale(1.1, 0.9);
-            transform: scale(1.1, 0.9);
-  }
-  75% {
-    -webkit-transform: scale(0.95, 1.05);
-            transform: scale(0.95, 1.05);
-  }
-}
-
-@keyframes jelly {
-  0%,
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  25% {
-    -webkit-transform: scale(0.9, 1.1);
-            transform: scale(0.9, 1.1);
-  }
-  50% {
-    -webkit-transform: scale(1.1, 0.9);
-            transform: scale(1.1, 0.9);
-  }
-  75% {
-    -webkit-transform: scale(0.95, 1.05);
-            transform: scale(0.95, 1.05);
-  }
-}
-
 .contactFormContainer {
-  padding: 5% 0;
+  padding-top: 5%;
+  padding-bottom: 2%;
 }
 
 .contactFieldset {
@@ -943,21 +815,25 @@ footer {
   background: #808080;
 }
 
+.footerParagraph p {
+  color: #fff;
+}
+
 @media only screen and (max-width: 1622px) {
   .iconGrouping {
-    margin: 0px 11%;
+    margin: 11%;
   }
 }
 
 @media only screen and (max-width: 1585px) {
   .iconGrouping {
-    margin: 0px 9%;
+    margin: 8% 9%;
   }
 }
 
-@media only screen and (max-width: 1475px) {
+@media only screen and (max-width: 1477px) {
   .iconGrouping {
-    margin: 0px 7%;
+    margin: 8% 7%;
   }
 }
 
@@ -975,7 +851,7 @@ footer {
 
 @media only screen and (max-width: 1383px) {
   .iconGrouping {
-    margin: 0px 5%;
+    margin: 8% 5%;
   }
 }
 
@@ -992,7 +868,7 @@ footer {
     margin-left: 3%;
   }
   .iconGrouping {
-    margin: 0px 4%;
+    margin: 8% 4%;
   }
 }
 
@@ -1004,11 +880,11 @@ footer {
 
 @media only screen and (max-width: 1315px) {
   .iconGrouping {
-    margin: 0px 2%;
+    margin: 8% 2%;
   }
 }
 
-@media only screen and (max-width: 1285px) {
+@media only screen and (max-width: 1289px) {
   .iconGrouping {
     margin: 0px 15%;
   }
@@ -1170,6 +1046,23 @@ footer {
   }
 }
 
+@media only screen and (max-width: 355px) {
+  .skills {
+    font-size: 0.9rem;
+  }
+  .foodieAppButtonContainer {
+    margin: 0%;
+  }
+  .sectionHeading {
+    font-size: 1.2rem;
+    padding: 10% 0;
+  }
+  footer p {
+    font-size: 0.7rem;
+    padding: 5% 0;
+  }
+}
+
 .contactFormContainer {
   background-color: rgba(220, 220, 220, 0.2);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
@@ -1183,7 +1076,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 15%;
+  margin: 0 25%;
 }
 
 .contactFormCommentButton {
@@ -1199,6 +1092,7 @@ footer {
 .email {
   text-transform: lowercase;
   font-weight: 700;
+  margin: 0;
 }
 
 .formContents {
@@ -1246,7 +1140,7 @@ textarea {
   border: none;
   background: #fff;
   padding: 0 5%;
-  padding: 3%;
+  padding: 2%;
   width: 45%;
 }
 
@@ -1327,6 +1221,7 @@ textarea#contactComment {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 0;
+  cursor: pointer;
 }
 
 .socialHandles i {
@@ -1339,6 +1234,12 @@ textarea#contactComment {
   color: #8f278f;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media only screen and (max-width: 859px) {
+  .contactFieldset {
+    margin: 0 10%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
