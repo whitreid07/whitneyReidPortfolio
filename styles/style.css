@@ -327,8 +327,9 @@ fieldset {
 
 footer p {
   text-align: center;
-  font-size: 0.8rem;
-  padding: 1%;
+  font-size: 0.7rem;
+  padding: 1.5% 7%;
+  line-height: 1rem;
 }
 
 .headerContainer {
@@ -429,6 +430,12 @@ li {
   font-weight: 700;
 }
 
+.connect:hover {
+  color: #696969;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .headerIcons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,7 +446,7 @@ li {
           flex-direction: column;
   position: fixed;
   right: 0;
-  bottom: 70px;
+  bottom: 128px;
   padding-right: 1%;
   z-index: 10;
 }
@@ -517,6 +524,10 @@ li {
   }
 }
 
+.menuToggle {
+  display: none;
+}
+
 @media only screen and (max-width: 1490px) {
   .headerContainer {
     background-position: 70% 0px;
@@ -547,13 +558,129 @@ li {
   }
 }
 
-@media only screen and (max-width: 1175px) {
+@media only screen and (max-width: 1256px) {
   .navLinks {
     display: none;
   }
   .arrowContainer {
-    margin-top: 25%;
+    margin-top: 5%;
   }
+  .menuToggle {
+    /* Relative so our .menu and .hello and our input have an anchor */
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 500;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .menuToggle input {
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this visually only */
+    z-index: 1000;
+    /* and place it over the hamburger spans */
+  }
+  .menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #8f278f;
+    border-radius: 3px;
+    z-index: 20;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s, opacity 0.55s ease, -webkit-transform 0.5s;
+    transition: background 0.5s, opacity 0.55s ease, -webkit-transform 0.5s;
+    transition: transform 0.5s, background 0.5s, opacity 0.55s ease;
+    transition: transform 0.5s, background 0.5s, opacity 0.55s ease, -webkit-transform 0.5s;
+  }
+  .menuToggle span:nth-of-type(3) {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  /* when the checkbox is checked, select the spans
+	and rotate it by 45deg, translate it to place it at 
+	a perfect criss cross
+	 */
+  .menuToggle input:checked ~ span {
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    /*background: #232323;*/
+  }
+  /* visually hide the middle span. *note*
+	span:nth-child(2) will not work because the 
+	middle span is not the second child in the
+	.menuToggle div. This is a great use case of
+	nth-of-type */
+  .menuToggle input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menuToggle input:checked ~ span:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  .menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    list-style-type: none;
+    /* move our menu left the same mount as 
+	  the width it has  */
+    left: -300px;
+    /* add transition for that smooth slide back in */
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 5%;
+  }
+  .menu li {
+    padding: 30px 0;
+    font-size: 22px;
+    padding-left: 50px;
+    text-transform: uppercase;
+  }
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .menu a:hover {
+    color: #8f278f;
+  }
+  /*
+	when the checkbox is checked, select the menu
+	and move it from left -300px back to 0 so it's
+	visible
+	 */
+  .menuToggle input:checked ~ .menu {
+    left: 0;
+    /* was at left: -300px ;*/
+  }
+  /*
+	when the checkbox is checked, select the hello
+	and move it from left -300px back to 0 so it's
+	visible
+	 */
 }
 
 @media only screen and (max-width: 1140px) {
@@ -576,10 +703,16 @@ li {
   }
   .subHeader {
     font-size: 1.2rem;
-    width: 40%;
+    width: 100%;
   }
   .headerParagraph {
     width: 45%;
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  .headerContainer {
+    height: 220vh;
   }
 }
 
@@ -596,7 +729,7 @@ li {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    top: 45%;
+    top: 51%;
   }
   h1 {
     width: 100%;
@@ -641,9 +774,29 @@ li {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  h1 {
-    padding-bottom: 5%;
+@media only screen and (max-width: 764px) {
+  .headerContainer {
+    background-image: url("../images/headerBackground_740.png");
+    height: 140vh;
+  }
+  .menuToggle span {
+    background: #696969;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .headerContainer {
+    background-image: url("../images/headerBackground_740.png");
+    height: 250vh;
+  }
+  .headerContentsContainer {
+    top: 42%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .list2 {
+    display: none;
   }
 }
 
@@ -653,9 +806,40 @@ li {
   }
 }
 
-@media only screen and (max-width: px) {
+@media only screen and (max-width: 415px) {
+  .headerContainer {
+    background-image: url("../images/headerBackground_360.png");
+    height: 150vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .sectionHeading {
+    line-height: 1.9rem;
+    padding: 7% 5%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .headerContainer {
+    background-image: url("../images/headerBackground_360.png");
+    height: 110vh;
+  }
+  .headerContentsContainer {
+    top: 43%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .headerContainer {
+    background-image: url("../images/headerBackground_360.png");
+    height: 150vh;
+  }
+  .headerContentsContainer {
+    top: 40%;
+  }
   h1 {
-    margin-top: 0;
+    margin: 0%;
   }
 }
 
@@ -672,6 +856,9 @@ li {
     font-size: 0.9rem;
     text-align: left;
     padding: 7%;
+  }
+  .menu {
+    width: 100%;
   }
 }
 
@@ -690,7 +877,6 @@ li {
 }
 
 .zoltarSpeaksContents p,
-.foodieAppContents p,
 .eventsAppContents p {
   font-size: 1rem;
   line-height: 1.4rem;
@@ -701,9 +887,20 @@ li {
 
 .zoltarSpeaksContents p {
   padding-right: 7%;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-bottom: 7%;
+  padding-top: 5%;
 }
 
 .foodieAppContents p {
+  padding-right: 13%;
+  padding-top: 5%;
+  line-height: 1.4rem;
+}
+
+.eventsAppContents p {
   padding-right: 11%;
 }
 
@@ -745,6 +942,7 @@ li {
 .foodieAppImageContainer,
 .eventsAppImageContainer {
   width: 50%;
+  cursor: pointer;
 }
 
 .skillsToolkit {
@@ -940,8 +1138,8 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  h1 {
-    margin-top: 15%;
+  .headerContents {
+    margin-top: 5%;
   }
   .arrowContainer {
     margin-top: 6%;
@@ -991,7 +1189,7 @@ footer {
     margin: 0;
     padding: 0;
     padding-left: 5%;
-    padding-right: 19%;
+    padding-right: 5%;
     padding-top: 5%;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1002,21 +1200,28 @@ footer {
     padding-top: 5%;
     padding-left: 0;
     font-family: 'Gravitas One', cursive;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
   }
   p.zoltarParagraph,
   p.foodieParagraph,
   p.eventsParagraph {
     padding-left: 0;
-    padding-right: 0%;
+    padding-right: 5%;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .skills {
+    font-size: 0.9rem;
   }
   .zoltarSpeaksButtonContainer,
-  .eventsAppButtonContainer {
-    margin: 0;
-    padding-top: 3%;
-  }
+  .eventsAppButtonContainer,
   .foodieAppButtonContainer {
     margin: 0;
     padding-top: 3%;
+  }
+  .foodieAppButtonContainer a {
+    font-size: 0.9rem;
   }
   .contactFieldset {
     margin: 0px 10%;
@@ -1024,9 +1229,6 @@ footer {
 }
 
 @media only screen and (max-width: 360px) {
-  .headerContainer {
-    height: 120vh;
-  }
   .headerTitle h1 {
     font-size: 1.9rem;
     line-height: 2.2rem;
@@ -1046,20 +1248,40 @@ footer {
   }
 }
 
-@media only screen and (max-width: 355px) {
-  .skills {
-    font-size: 0.9rem;
-  }
-  .foodieAppButtonContainer {
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.9rem;
+    line-height: 2rem;
     margin: 0%;
   }
+  .headerParagraph {
+    font-size: 0.8rem;
+  }
+  .skills {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 355px) {
   .sectionHeading {
     font-size: 1.2rem;
     padding: 10% 0;
   }
   footer p {
+    text-align: center;
     font-size: 0.7rem;
-    padding: 5% 0;
+    padding: 1.5% 7%;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  p.zoltarParagraph,
+  p.foodieParagraph,
+  p.eventsParagraph {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    padding-right: 0%;
   }
 }
 
@@ -1093,6 +1315,7 @@ footer {
   text-transform: lowercase;
   font-weight: 700;
   margin: 0;
+  color: #808080;
 }
 
 .formContents {

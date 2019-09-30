@@ -4,7 +4,6 @@ $tertiary: #E6E6FA;
 
 //PROJECTS
 
-
 .projects {
   background-color: rgba(220,220,220, 0.1);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
@@ -20,7 +19,7 @@ $tertiary: #E6E6FA;
 }
 
 .zoltarSpeaksContents p,
-.foodieAppContents p,
+
 .eventsAppContents p {
   font-size: 1rem;
   line-height: 1.4rem;
@@ -31,9 +30,19 @@ $tertiary: #E6E6FA;
 
 .zoltarSpeaksContents p {
   padding-right: 7%;
+   font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-bottom: 7%;
+  padding-top: 5%;
 }
 
 .foodieAppContents p {
+  padding-right: 13%;
+  padding-top: 5%;
+  line-height: 1.4rem;
+}
+.eventsAppContents p {
   padding-right: 11%;
 }
 
@@ -68,6 +77,7 @@ $tertiary: #E6E6FA;
 .foodieAppImageContainer,
 .eventsAppImageContainer {
   width: 50%;
+  cursor: pointer;
 }
 
 //TOOLKIT
@@ -99,11 +109,6 @@ $tertiary: #E6E6FA;
   padding: 0.5em 1em;
   outline: none;
   border: none;
-
-  img:hover {
-    // cursor: pointer;
-    // animation: jelly 0.5s;
-  }
 }
 
 //FORM STYLES
@@ -257,6 +262,10 @@ footer {
     }
 }
 
+@media only screen and (max-width: 800px){
+
+}
+
 @media only screen and (max-width: 789px){
 
   .foodieAppButtonContainer button {
@@ -266,10 +275,10 @@ footer {
 
 @media only screen and (max-width: 767px){
 
-  
-  h1 {
-    margin-top: 15%;
+  .headerContents {
+    margin-top: 5%;
   }
+
 
   .arrowContainer {
     margin-top: 6%;
@@ -310,7 +319,7 @@ footer {
     margin: 0;
     padding: 0;
     padding-left: 5%;
-    padding-right: 19%;
+    padding-right: 5%;
     padding-top: 5%;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -322,23 +331,31 @@ footer {
     padding-top: 5%;
     padding-left: 0;
     font-family: 'Gravitas One', cursive;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
   }
   p.zoltarParagraph,
   p.foodieParagraph,
   p.eventsParagraph {
     padding-left: 0;
-    padding-right: 0%;
+    padding-right: 5%;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+
+  .skills {
+    font-size: 0.9rem;
   }
 
   .zoltarSpeaksButtonContainer,
-  .eventsAppButtonContainer{
+  .eventsAppButtonContainer,
+  .foodieAppButtonContainer{
     margin: 0;
     padding-top: 3%;
   }
 
-  .foodieAppButtonContainer {
-    margin: 0;
-    padding-top: 3%;
+  .foodieAppButtonContainer a {
+    font-size: 0.9rem;
   }
 
   .contactFieldset {
@@ -348,9 +365,6 @@ footer {
 
 @media only screen and (max-width: 360px){
 
-  .headerContainer {
-    height: 120vh;
-  }
   .headerTitle h1 {
     font-size: 1.9rem;
     line-height: 2.2rem;
@@ -373,14 +387,24 @@ footer {
   }
 }
 
-@media only screen and (max-width: 355px) {
-  .skills {
-    font-size: 0.9rem;
-  }
+@media only screen and (max-width: 375px) {
 
-  .foodieAppButtonContainer {
+  h1 {
+    font-size: 1.9rem;
+    line-height: 2rem;
     margin: 0%;
   }
+  .headerParagraph {
+    font-size: 0.8rem;
+  }
+
+  .skills {
+  font-size: 0.8rem;
+
+}
+}
+
+@media only screen and (max-width: 355px) {
 
   .sectionHeading {
     font-size: 1.2rem;
@@ -388,7 +412,19 @@ footer {
   }
 
   footer p {
+    text-align: center;
     font-size: 0.7rem;
-    padding: 5% 0;
+    padding: 1.5% 7%;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  p.zoltarParagraph, 
+  p.foodieParagraph, 
+  p.eventsParagraph {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    padding-right: 0%;
   }
 }

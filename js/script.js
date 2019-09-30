@@ -29,29 +29,20 @@ $(document).ready(function () {
 
   //SCROLL TO PROJECTS SECTION
   $('.list1').click(function (event) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log('clicked!');
     $('html, body').animate({
       scrollTop: $('.headerContainer').offset().top + $('.headerContainer').height()
-    }, 2000);
+    }, 1000);
   });
 
   //SCROLL TO SKILLS SECTION
   $('.list2').click(function (event) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log('clicked!');
     $('html, body').animate({
       scrollTop: $('.skillsToolkit').offset().top + $('#skills').height()
-    }, 1000);
-  });
-
-  //SCROLL TO CONTACT SECTION FROM HEADER LINK
-  $('.connect').click(function (event) {
-    event.preventDefault();
-    console.log('clicked!');
-    $('html, body').animate({
-      scrollTop: $('.contactFormContainer').offset().top + $('.contactFormContainer').height()
-    }, 2000);
+    }, 3000);
   });
 
   //SCROLL TO CONTACT SECTION
@@ -60,7 +51,22 @@ $(document).ready(function () {
     console.log('clicked!');
     $('html, body').animate({
       scrollTop: $('.contactFormContainer').offset().top + $('.contactFormContainer').height()
-    }, 2000);
+    }, 1000);
+  });
+
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+
+  //Click event to scroll to top
+  $('.scrollToTop').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 800);
+    return false;
   });
 })
 

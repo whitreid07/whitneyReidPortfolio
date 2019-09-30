@@ -9,19 +9,35 @@
   <script src="https://kit.fontawesome.com/eef311a6a4.js"></script>
   <link type="image/png" href="favicon/nemo.png" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Gravitas+One&display=swap" rel="stylesheet">
-  <link type="image/png" href="favicon/whitney-reid.png" rel="icon">
+  <link type="image/png" href="favicon/whitneyReidFavicon.png" rel="icon">
   <title>Whitney Reid's Porfolio</title>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <!-- HEADER STARTS -->
     <header class="headerContainer">
+      <!-- Hamburger menu -->
+      <div class="menuToggle">
+        <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+        <input type="checkbox" />
+
+        <!--
+                Using spans as the hamburger menu.
+              -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul class="menu">
+          <li class="list1"><a href="#projects">portfolio</a></li>
+          <li class="list2"><a href="#skills">skills</a></li>
+          <li class="list3"><a href="#contact">contact</a></li>
+        </ul>
+      </div>
       <div class="innerWrapper">
         <!-- <div id="navigation" class="hidden"> -->
         <!-- NAV STARTS -->
@@ -45,7 +61,7 @@
               building accessible, functional and eye-catching web applications to capivate the best user
               experience using HTML, CSS, JavaScript and React! Challenging myself is what I strive for - bringing ideas
               to life from concept to final product is
-              so rewarding! <a href="#contact"><span class="connect">Lets connect!</span></p></a>
+              so rewarding! <a href="#contact"><span class="connect">Lets connect!</span></a></p>
 
           </div>
           <div class="arrowContainer bounce">
@@ -54,17 +70,18 @@
           </div>
         </div>
       </div>
+    </header> <!-- End of header-->
+
+    <main>
       <div class="headerIcons">
         <div class="arrowUpContainer scrollToTop">
           <span><i class="fas fa-arrow-circle-up" aria-hidden="true"></i></span>
           <span class="sr-only">Up arrow Icon</span>
         </div>
       </div>
-    </header> <!-- End of header-->
 
-    <main>
       <!--PROJECT 1 -->
-      <section class="projects">
+      <section class="projectSection projects">
         <h2 class="sectionHeading" id="projects">my portfolio</h2>
         <div class="innerWrapper">
           <div class="zoltarSpeaksContainer">
@@ -120,24 +137,20 @@
         <div class="innerWrapper">
           <div class="eventsAppContainer">
             <div class="eventsAppContents">
-              <h3 class="eventsHeading">Events App</h3>
-              <p class="eventsParagraph">Are you looking for something fun to do in your city? Check out this events app
-                where you select your city,
-                type of event and specific date to see what's happening! A pair programming project. <span
-                  class="skills">javascript |
-                  jquery | rest api</span></p>
+              <h3 class="eventsHeading">Under the sea </h3>
+              <p class="eventsParagraph">A multi-page PSD conversion project converted into a functional and responsive
+                website. <span class="skills">
+                  html5 | sass</span></p>
               <div class="eventsAppButtonContainer">
-                <button><a href="https://norrewhitneyprojectfour.github.io/whitneyNorreProjectFour/"
-                    target="_blank">View
+                <button><a href="https://whitreid07.github.io/whitney-reid-project-2/" target="_blank">View
                     Live</a></button>
-                <button><a href="https://github.com/norreWhitneyProjectFour/whitneyNorreProjectFour"
-                    target="_blank">View
+                <button><a href="https://github.com/whitreid07/whitney-reid-project-2" target="_blank">View
                     Github</a></button>
               </div>
             </div>
             <div class="eventsAppImageContainer">
-              <a href="https://norrewhitneyprojectfour.github.io/whitneyNorreProjectFour/" target="_blank"><img
-                  src="images/eventsAppMockup.png" alt="events mockup"></a>
+              <a href="https://whitreid07.github.io/whitney-reid-project-2/" target="_blank"><img
+                  src="images/underTheSeaMockup.png" alt="events mockup"></a>
             </div>
           </div>
       </section>
@@ -203,11 +216,13 @@
         <div class="innerWrapper">
           <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
             <fieldset class="contactFieldset">
-              <p class="contactParagraph1">I would love to hear from you! If you would like to collobrate on a cool idea
+              <p class="contactParagraph1">I would love to hear from you! If you would like to collaborate on a cool
+                idea
                 or just want to grab a coffee to talk about tech send me a note!</p>
-              <p class="contactParagraph2">Use the form below or directly to <span
-                  class="email">whitney.reid.designs@gmail.com</span></p>
-
+              <p class="contactParagraph2">Use the form below or directly to
+                <a href="mailto:whitney.reid.designs@gmail.com"><span
+                    class="email">whitney.reid.designs@gmail.com</span>
+              </p>
               <div class="contactFormInput">
                 <label for="text" class="visuallyHidden">Type your name</label>
                 <input type="name" required=required placeholder="Name*" id="contactName" name="name">
@@ -217,7 +232,8 @@
               </div>
               <div class="contactFormCommentButton">
                 <label for="text" class="visuallyHidden">Type your message</label>
-                <textarea rows="" cols="" id="contactComment" required=required placeholder="Message*"></textarea>
+                <textarea name="message" rows="" cols="" id="contactComment" required=required
+                  placeholder="Message*"></textarea>
                 <div class="submitButtonContainer">
                   <button>send email</button>
                 </div>
@@ -241,7 +257,7 @@
       </div>
     </main>
     <footer>
-      <p class="footerPargraph">Created and Designed by Whitney Reid © 2019</p>
+      <p class="footerPargraph">Created and Designed by Whitney Reid © 2019 | Headshot taken by Fatima Gueye</p>
     </footer>
   </div> <!-- End of wrapper-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
