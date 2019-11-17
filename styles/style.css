@@ -214,7 +214,7 @@ h1 {
   width: 50%;
   line-height: 4.7rem;
   margin-top: 8%;
-  color: #696969;
+  color: #625c5c;
 }
 
 h2 {
@@ -224,7 +224,7 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #696969;
+  color: #625c5c;
 }
 
 h3 {
@@ -233,15 +233,23 @@ h3 {
   font-size: 1.5rem;
 }
 
-a, li {
-  color: #fff;
+a {
+  color: #625c5c;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
-a a:hover, a li:hover, li a:hover, li li:hover {
+a a:hover {
+  color: #8f278f;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navLinks a:hover {
   color: #8f278f;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -261,7 +269,7 @@ button {
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
   border: none;
-  background: #8f278f;
+  background: none;
   border: 2px solid #8f278f;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -276,8 +284,8 @@ button::before {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: #696969;
-  border: 2px solid #696969;
+  background-color: #8f278f;
+  border: 2px solid #625c5c;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
@@ -291,8 +299,7 @@ button::before {
 
 button:hover a {
   cursor: pointer;
-  color: fff;
-  border: 2px solid #696969;
+  color: #fff;
 }
 
 button:hover::before {
@@ -306,6 +313,16 @@ input {
 
 fieldset {
   border: none;
+}
+
+.sendEmail {
+  color: #625c5c;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.sendEmail:hover {
+  color: #fff;
 }
 
 .wrapper {
@@ -913,16 +930,18 @@ li {
 .skills {
   display: block;
   margin-top: 5%;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #808080;
+  color: #625c5c;
 }
 
 .zoltarSpeaksContents p,
 .eventsAppContents p {
   font-size: 1rem;
   line-height: 1.4rem;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
 }
@@ -931,7 +950,8 @@ li {
   padding-right: 7%;
   font-size: 1rem;
   line-height: 1.4rem;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
 }
@@ -940,6 +960,8 @@ li {
   padding-right: 13%;
   padding-top: 5%;
   line-height: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .eventsAppContents p {
@@ -959,9 +981,10 @@ li {
 .eventsHeading {
   padding-top: 5%;
   padding-left: 0;
-  font-family: 'Gravitas One', cursive;
-  text-transform: capitalize;
-  color: #808080;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8f278f;
   font-size: 1.2rem;
 }
 
@@ -977,13 +1000,18 @@ li {
           flex-direction: column;
   width: 50%;
   padding-right: 5%;
-  margin-left: 5%;
 }
 
 .zoltarImageContainer,
-.foodieAppImageContainer,
 .eventsAppImageContainer {
   width: 50%;
+  cursor: pointer;
+}
+
+.foodieAppImageContainer {
+  width: 50%;
+  margin-left: -5%;
+  margin-right: 5%;
   cursor: pointer;
 }
 
@@ -1052,7 +1080,7 @@ li {
 
 footer {
   color: #fff;
-  background: #808080;
+  background: #8f278f;
 }
 
 .footerParagraph p {
@@ -1355,9 +1383,17 @@ footer {
 
 .email {
   text-transform: lowercase;
-  font-weight: 700;
-  margin: 0;
-  color: #808080;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 3px solid #8f278f;
+  padding-bottom: 0.2%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.email:hover {
+  color: #8f278f;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .formContents {
@@ -1407,6 +1443,7 @@ textarea {
   padding: 0 5%;
   padding: 2%;
   width: 45%;
+  border-radius: 10px;
 }
 
 #contactComment {

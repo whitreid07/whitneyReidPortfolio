@@ -21,9 +21,16 @@ $tertiary: #E6E6FA;
 
 .email {
   text-transform: lowercase;
-  font-weight: 700;
-  margin: 0;
-  color: $secondary;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 3px solid #8f278f;
+  padding-bottom: 0.2%;
+  font-family: 'Montserrat', sans-serif;
+
+  &:hover {
+    color: $primary;
+    transition: all 0.3s;
+  }
 }
 
 .formContents {
@@ -62,11 +69,12 @@ textarea {
 
  #contactName,
  #contactEmail {
-    border: none;
-    background: #fff;
-    padding: 0 5%;
-    padding: 2%;
-    width: 45%;
+  border: none;
+  background: #fff;
+  padding: 0 5%;
+  padding: 2%;
+  width: 45%;
+  border-radius: 10px;
 }
 
 #contactComment {
@@ -115,7 +123,7 @@ textarea {
 input#contactName,
 input#contactEmail,
 textarea#contactComment {
-    border-bottom: 2px solid $primary;
+  border-bottom: 2px solid $primary;
 
 }
 

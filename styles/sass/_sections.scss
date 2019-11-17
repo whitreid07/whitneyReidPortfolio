@@ -1,5 +1,5 @@
 $primary: #8f278f;
-$secondary: #808080;
+$secondary: #625c5c;
 $tertiary: #E6E6FA;
 
 //PROJECTS
@@ -13,26 +13,28 @@ $tertiary: #E6E6FA;
 .skills {
   display: block;
   margin-top: 5%;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: $secondary;
 }
 
 .zoltarSpeaksContents p,
-
 .eventsAppContents p {
   font-size: 1rem;
   line-height: 1.4rem;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
 }
 
 .zoltarSpeaksContents p {
   padding-right: 7%;
-   font-size: 1rem;
+  font-size: 1rem;
   line-height: 1.4rem;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
 }
@@ -41,6 +43,8 @@ $tertiary: #E6E6FA;
   padding-right: 13%;
   padding-top: 5%;
   line-height: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 .eventsAppContents p {
   padding-right: 11%;
@@ -57,9 +61,10 @@ $tertiary: #E6E6FA;
  .eventsHeading {
     padding-top: 5%;
     padding-left: 0;
-    font-family: 'Gravitas One', cursive;
-    text-transform: capitalize;
-    color: $secondary;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
     font-size: 1.2rem;
   }
 
@@ -70,13 +75,18 @@ $tertiary: #E6E6FA;
   flex-direction: column;
   width: 50%;
   padding-right: 5%;
-  margin-left: 5%
 } 
 
 .zoltarImageContainer,
-.foodieAppImageContainer,
 .eventsAppImageContainer {
   width: 50%;
+  cursor: pointer;
+}
+
+.foodieAppImageContainer {
+  width: 50%;
+  margin-left: -5%;
+  margin-right: 5%;
   cursor: pointer;
 }
 
@@ -135,7 +145,7 @@ $tertiary: #E6E6FA;
 
 footer {
   color: #fff;
-  background: $secondary;
+  background: $primary;
 }
 
 .footerParagraph p {

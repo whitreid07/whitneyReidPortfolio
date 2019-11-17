@@ -1,5 +1,5 @@
 $primary: #8f278f;
-$secondary: #696969;
+$secondary: #625c5c;
 $tertiary: #ddbedd;
  
  html {
@@ -14,7 +14,6 @@ $tertiary: #ddbedd;
     max-width: 100%;
     overflow-x: hidden;
   }
-
 
  img {
   width: 100%;
@@ -52,17 +51,25 @@ h3 {
   font-size: 1.5rem;
 }
 
-a, li {
-  color: #fff;;
+a {
+  color: $secondary;
   text-decoration: none;
   transition: all 0.3s;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 
-  a:hover, li:hover {
+  a:hover {
     color: $primary;
     transition: all 0.3s;
   }
 }
+
+.navLinks a:hover {
+  color: $primary;
+  transition: all 0.3s;
+}
+
 
 button {
   z-index: 1;
@@ -77,7 +84,7 @@ button {
   overflow: hidden;
   transition: color 0.4s ease-in-out;
   border: none;
-  background: $primary;
+  background: none;
   border: 2px solid $primary;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -92,7 +99,7 @@ button::before {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: $secondary;
+  background-color: $primary;
   border: 2px solid $secondary;
   transform-origin: center;
   transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
@@ -102,8 +109,7 @@ button::before {
 
 button:hover a {
   cursor: pointer;
-  color: fff;
-  border: 2px solid $secondary;
+  color: #fff;
 }
 
 button:hover::before {
@@ -117,6 +123,16 @@ input {
 
 fieldset {
   border: none;
+}
+
+.sendEmail {
+  color: $secondary;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .wrapper {
