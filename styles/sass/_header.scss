@@ -82,6 +82,7 @@ li {
 
 .headerConnect {
    padding-top: 1%;
+   padding-bottom: 8%;
 }
 
 .connect {
@@ -121,13 +122,11 @@ li {
 }
 
 .arrowContainer  {
-  margin-top: 7%;
+  // margin-top: 17%;
   color: $primary;
   cursor: pointer;
-  position: absolute;
-  bottom: 0;
   margin: 0 auto;
-  text-align: center;
+
 
   i {
     font-size: 2rem;
@@ -206,7 +205,8 @@ li {
   h1 {
     font-size: 3.5rem;
     text-transform: capitalize;
-    line-height: 4rem;
+    line-height: 5rem;
+    // margin-top: 18%;
     padding-left: 3%;
     padding-top: 1%;
   }
@@ -229,6 +229,15 @@ li {
 
 @media only screen and (max-width: 1256px){
 
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
   .navLinks {
     display: none;
   }
@@ -245,8 +254,6 @@ li {
       left: 9px;  
 	  	z-index: 500;
 	  	display:block;
-	  	width:100%;
-	  	height:100%;
 	}
 
 	.menuToggle input {
@@ -355,6 +362,21 @@ li {
 
 }
 
+@media only screen and (max-width: 1255px){
+
+  h1{
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 1232px){
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.7rem;
+  }
+}
+
 @media only screen and (max-width: 1140px){
 
   h1 {
@@ -373,9 +395,14 @@ li {
   }
 
   h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    width: 45%;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    width: 35%;
+    margin-top: 10%;
+  }
+
+  .headerConnect {
+    padding-bottom: 0%;
   }
 
   .subHeader {
@@ -388,7 +415,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 823px){
 
   html, body {
     max-width: 100%;
@@ -402,6 +429,7 @@ li {
   .headerContainer {
     background-image: url('../images/headerBackground674.png');
     background-position: 80% 0px;
+    height: 150vh;
   }
 
   .headerContentsContainer {
@@ -413,11 +441,11 @@ li {
   h1 {
     width: 100%;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 2rem;
     padding-bottom: 2%;
-    font-size: 2rem;
-    margin-top: 7%;
-    line-height: 2rem;
+    font-size: 2.5rem;
+    margin-top: 17%;
+    line-height: 3rem;
   }
 
   .subHeader,
@@ -429,12 +457,14 @@ li {
   .subHeader {
     text-align: center;
     padding: 2%;
+    font-size: 1.3rem;
   }
 
   .headerParagraph {
-    padding-bottom: 0 5%;
+    padding-bottom: 0 7%;
     font-size: 1rem;
     text-align: left;
+    padding-top: 5%;
   }
 
   .headerContents {
@@ -447,6 +477,11 @@ li {
   
   .headerContainer {
     background-position: 50% 0px;
+  }
+
+  .headerConnect {
+    width: 100%;
+    padding: 0 8%;
   }
 
   .arrowContainer {
@@ -462,10 +497,10 @@ li {
 }
 
 @media only screen and (max-width: 764px){
-  .headerContainer {
-    background-image: url('../images/headerBackground_740.png');
-    height: 140vh;
-  }
+  // .headerContainer {
+  //   background-image: url('../images/headerBackground_740.png');
+  //   // height: 140vh;
+  // }
 
   .menuToggle span{
 	  background: $secondary;
@@ -475,7 +510,7 @@ li {
 @media only screen and (max-width: 740px){
   .headerContainer {
     background-image: url('../images/headerBackground_740.png');
-    height: 250vh;
+    // height: 250vh;
   }
   .headerContentsContainer {
     top: 42%;
