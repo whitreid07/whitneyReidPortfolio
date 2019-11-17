@@ -6,10 +6,13 @@ $tertiary: #ddbedd;
   font-size: 125%;
   background-color: #fffcfc;
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
  body {
-    overflow-x: hidden; 
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
 
@@ -19,6 +22,7 @@ $tertiary: #ddbedd;
 
  ul {
   list-style-type: none;
+  font-weight: 500;
 }
 
  h1 {
@@ -27,8 +31,9 @@ $tertiary: #ddbedd;
   font-size: 4rem;
   text-transform: capitalize;
   width: 50%;
-  line-height: 5rem;
-  margin-top: 15%;
+  line-height: 4.7rem;
+  margin-top: 8%;
+  color: $secondary;
 }
 
 h2 {
@@ -42,34 +47,25 @@ h2 {
 }
 
 h3 {
-  text-transform: lowercase;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
 }
 
-a {
+a, li {
   color: #fff;;
   text-decoration: none;
   transition: all 0.3s;
   cursor: pointer;
-}
 
-a:hover {
-  color: #fff;
+  a:hover, li:hover {
+    color: $primary;
+    transition: all 0.3s;
+  }
 }
-
-a:visted {
-  color: #fff;
-}
-
-a:focus {
-  outline: 3px solid $primary;
-}
-
 
 button {
-z-index: 1;
+  z-index: 1;
   position: relative;
   font-size: inherit;
   font-family: inherit;
@@ -104,7 +100,7 @@ button::before {
   border: 2px solid $primary;
 }
 
-button:hover {
+button:hover a {
   cursor: pointer;
   color: fff;
   border: 2px solid $secondary;
@@ -123,20 +119,14 @@ fieldset {
   border: none;
 }
 
-
-:focus {
-  outline: 2px solid $secondary;
-}
-
 .wrapper {
   max-width: 1680px;
   margin: 0 auto;
 }
 
 .innerWrapper {
-  max-width: 1280px;
+  max-width: 1380px;
   margin: 0 auto;
-  // width: 85%;
   height: 100%;
 }
 

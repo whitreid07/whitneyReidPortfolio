@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://kit.fontawesome.com/eef311a6a4.js"></script>
   <link type="image/png" href="favicon/nemo.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css?family=Gravitas+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gravitas+One|Montserrat:400,500,700&display=swap"
+    rel="stylesheet">
   <link type="image/png" href="favicon/whitneyReidFavicon.png" rel="icon">
   <title>Whitney Reid's Porfolio</title>
 </head>
 
 <body>
   <div class="wrapper">
+
     <!-- HEADER STARTS -->
     <header class="headerContainer">
       <!-- Hamburger menu -->
@@ -25,9 +27,7 @@
               -->
         <input type="checkbox" />
 
-        <!--
-                Using spans as the hamburger menu.
-              -->
+        <!--Using spans as the hamburger menu. -->
         <span></span>
         <span></span>
         <span></span>
@@ -38,32 +38,38 @@
           <li class="list3"><a href="#contact">contact</a></li>
         </ul>
       </div>
+
       <div class="innerWrapper">
-        <!-- <div id="navigation" class="hidden"> -->
+
         <!-- NAV STARTS -->
         <nav class="navLinks">
           <div class="logoContainer">
             <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
           </div>
+
           <ul>
-            <li class="list1"><a href="#projects">portfolio</a></li>
+            <li class="list1" tabindex="1"><a href="#projects">portfolio</a></li>
             <li class="list2"><a href="#skills">skills</a></li>
             <li class="list3"><a href="#contact">contact</a></li>
           </ul>
+
         </nav> <!-- End of nav-->
         <div class="headerContentsContainer">
           <div class="headerTitle">
             <h1>hello, I'm Whitney!</h1>
-            <h3 class="subHeader">a front-end developer!</h3>
+            <h3 class="subHeader">a front-end web developer!</h3>
           </div>
           <div class="headerContents">
             <p class="headerParagraph">I'm more than meets the eye! I have a background in design and have a passion in
-              building accessible, functional and eye-catching web applications to capivate the best user
+              building accessible, functional and eye-catching web applications to captivate the best user
               experience using HTML, CSS, JavaScript and React! Challenging myself is what I strive for - bringing ideas
-              to life from concept to final product is
-              so rewarding! <a href="#contact"><span class="connect">Lets connect!</span></a></p>
-
+              to life from concept to final product is so rewarding!
           </div>
+
+          <div class="headerConnect">
+            <a href="#contact"><span class="connect">Let's create magic!</span></a></p>
+          </div>
+
           <div class="arrowContainer bounce">
             <i class="fas fa-angle-double-down" aria-hidden="true"></i>
             <span class="sr-only">Arrow down icon</span>
@@ -217,11 +223,11 @@
           <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
             <fieldset class="contactFieldset">
               <p class="contactParagraph1">I would love to hear from you! If you would like to collaborate on a cool
-                idea
-                or just want to grab a coffee to talk about tech send me a note!</p>
+                idea or just want to grab a coffee to talk about tech send me a note!</p>
               <p class="contactParagraph2">Use the form below or directly to
-                <a href="mailto:whitney.reid.designs@gmail.com"><span
-                    class="email">whitney.reid.designs@gmail.com</span>
+                <a href="mailto:whitney.reid.designs@gmail.com">
+                  <span class="email">whitney.reid.designs@gmail.com</span>
+                </a>
               </p>
               <div class="contactFormInput">
                 <label for="text" class="visuallyHidden">Type your name</label>
@@ -230,6 +236,7 @@
                 <label for="email" class="visuallyHidden">Type your email address</label>
                 <input type="name" required=required placeholder="Email address*" id="contactEmail" name="email">
               </div>
+
               <div class="contactFormCommentButton">
                 <label for="text" class="visuallyHidden">Type your message</label>
                 <textarea name="message" rows="" cols="" id="contactComment" required=required
@@ -238,27 +245,32 @@
                   <button>send email</button>
                 </div>
             </fieldset>
-          </form>
+          </form><!-- End of form-->
+
           <div class="socialHandles">
             <a href="https://www.linkedin.com/in/whitney-reid-49282041" target="true"><i class="fab fa-linkedin-in"
                 aria-hidden="true"></i>
               <span class="sr-only">LinkedIn Icon</span>
             </a>
             <div class="twitterContainer">
-              <i class="fab fa-twitter"></i>
-              <span class="sr-only">Twitter Icon</span>
+              <a href="https://twitter.com/whit_reid07" target="true"><i class="fab fa-twitter"></i>
+                <span class="sr-only">Twitter Icon</span>
+              </a>
             </div>
             <div class="githubContainer">
-              <i class="fab fa-github"></i>
-              <span class="sr-only">Github Icon</span>
+              <a href="https://github.com/whitreid07" target="true"><i class="fab fa-github"></i>
+                <span class="sr-only">Github Icon</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </main> <!-- End of main-->
+
     <footer>
       <p class="footerPargraph">Created and Designed by Whitney Reid © 2019 | Headshot taken by Fatima Gueye</p>
-    </footer>
+    </footer><!-- End of footer-->
+
   </div> <!-- End of wrapper-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
