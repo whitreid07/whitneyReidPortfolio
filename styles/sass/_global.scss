@@ -1,6 +1,6 @@
 $primary: #8f278f;
-$secondary: #625c5c;
-$tertiary: #ddbedd;
+$secondary: #686666;
+$tertiary: #e61c5d;
  
  html {
   font-size: 125%;
@@ -11,8 +11,8 @@ $tertiary: #ddbedd;
 }
 
  body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
   }
 
  img {
@@ -28,11 +28,11 @@ $tertiary: #ddbedd;
   font-family: 'Gravitas One', cursive;
   font-weight: 700;
   font-size: 4rem;
-  text-transform: capitalize;
-  width: 50%;
+  // text-transform: capitalize;
   line-height: 4.7rem;
-  margin-top: 8%;
   color: $secondary;
+  text-align: center;
+  padding-top: 1%;
 }
 
 h2 {
@@ -41,14 +41,21 @@ h2 {
   padding-bottom: 5%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: $secondary;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 a {

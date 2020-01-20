@@ -210,11 +210,10 @@ h1 {
   font-family: 'Gravitas One', cursive;
   font-weight: 700;
   font-size: 4rem;
-  text-transform: capitalize;
-  width: 50%;
   line-height: 4.7rem;
-  margin-top: 8%;
-  color: #625c5c;
+  color: #686666;
+  text-align: center;
+  padding-top: 1%;
 }
 
 h2 {
@@ -223,18 +222,25 @@ h2 {
   padding-bottom: 5%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-  color: #625c5c;
+  text-transform: capitalize;
+  color: #686666;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 a {
-  color: #625c5c;
+  color: #686666;
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -285,7 +291,7 @@ button::before {
   height: 1em;
   border-radius: 50%;
   background-color: #8f278f;
-  border: 2px solid #625c5c;
+  border: 2px solid #686666;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
@@ -316,7 +322,7 @@ fieldset {
 }
 
 .sendEmail {
-  color: #625c5c;
+  color: #686666;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -343,11 +349,29 @@ footer p {
   line-height: 1rem;
 }
 
+html {
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+}
+
 .headerContainer {
-  background-image: url("../images/headerBackground.png");
+  background: white;
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.whitneyReidLogo {
+  width: 65%;
+  height: 65%;
+  margin: 0 auto;
+  margin-bottom: 5%;
 }
 
 .headerContentsContainer {
@@ -372,7 +396,7 @@ footer p {
 }
 
 .navLinks a {
-  color: #625c5c;
+  color: #686666;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -399,36 +423,31 @@ li {
   margin-right: 3%;
 }
 
-.whitneyLogo {
-  width: 70px;
-  padding-top: 3%;
-}
-
 .sectionHeading {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: 'Gravitas One', cursive;
-  color: #625c5c;
-  font-size: 1.7rem;
-  letter-spacing: 0.2rem;
+  color: #8f278f;
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .headerTitle {
-  color: #625c5c;
+  color: #8f278f;
 }
 
 .subHeader {
-  color: #8f278f;
+  color: #686666;
   padding: 1% 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 500;
-  padding-left: 1%;
+  text-align: center;
 }
 
 .headerParagraph {
   padding-top: 3%;
   width: 43%;
   line-height: 1.5rem;
-  color: #625c5c;
+  color: #686666;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -439,7 +458,7 @@ li {
 }
 
 .connect {
-  color: #625c5c;
+  color: #686666;
   cursor: pointer;
   font-weight: 500;
   border-bottom: 3px solid #8f278f;
@@ -448,7 +467,7 @@ li {
 }
 
 .connect:hover {
-  color: #8f278f;
+  color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -463,20 +482,20 @@ li {
           flex-direction: column;
   position: fixed;
   right: 0;
-  bottom: 128px;
+  bottom: 90px;
   padding-right: 1%;
   z-index: 10;
 }
 
 .headerIcons i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #8f278f;
   padding: 0% 15px;
   cursor: pointer;
 }
 
 .headerIcons i:hover {
-  color: #625c5c;
+  color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -484,7 +503,8 @@ li {
 .arrowContainer {
   color: #8f278f;
   cursor: pointer;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 2%;
 }
 
 .arrowContainer i {
@@ -492,7 +512,7 @@ li {
 }
 
 .arrowContainer:hover {
-  color: #625c5c;
+  color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -633,7 +653,7 @@ li {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #8f278f;
+    background: #e61c5d;
     border-radius: 3px;
     z-index: 20;
     -webkit-transform-origin: 4px 0px;
@@ -743,9 +763,6 @@ li {
 }
 
 @media only screen and (max-width: 950px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground950.png");
-  }
   .headerContentsContainer {
     padding-top: 10%;
   }
@@ -767,7 +784,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 823px) {
+@media only screen and (max-width: 899px) {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -775,25 +792,19 @@ li {
   .innerWrapper {
     position: relative;
   }
-  .headerContainer {
-    background-image: url("../images/headerBackground674.png");
-    background-position: 80% 0px;
-    height: 150vh;
-  }
   .headerContentsContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    top: 46%;
+    top: 40%;
   }
   h1 {
     width: 100%;
     text-align: center;
     padding: 0 2rem;
-    padding-bottom: 2%;
-    font-size: 2.5rem;
-    margin-top: 17%;
+    font-size: 2.3rem;
+    margin-top: 0;
     line-height: 3rem;
   }
   .subHeader,
@@ -818,15 +829,12 @@ li {
   .whitneyLogo {
     display: none;
   }
-  .headerContainer {
-    background-position: 50% 0px;
-  }
   .headerConnect {
     width: 100%;
-    padding: 0 8%;
+    padding: 1% 8%;
   }
   .arrowContainer {
-    margin-top: 13%;
+    margin-top: 6%;
   }
   .zoltarSpeaksContents,
   .foodieAppContents,
@@ -836,37 +844,74 @@ li {
   }
 }
 
-@media only screen and (max-width: 764px) {
-  .menuToggle span {
-    background: #625c5c;
+@media only screen and (max-width: 712px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .subHeader {
+    font-size: 1.1rem;
+  }
+  .headerParagraph {
+    font-size: 0.9rem;
   }
 }
 
-@media only screen and (max-width: 740px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground_740.png");
+@media only screen and (max-width: 628px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  .subHeader {
+    font-size: 1rem;
+  }
+  .headerParagraph {
+    font-size: 0.9rem;
+  }
+  .headerConnect {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 546px) {
+  .headerContentsContainer {
+    top: 36%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .subHeader {
+    font-size: 1rem;
+  }
+  .headerParagraph {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+  .headerConnect {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 464px) {
+  h1 {
+    font-size: 1.3rem;
   }
   .headerContentsContainer {
     top: 42%;
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .list2 {
-    display: none;
+@media only screen and (max-width: 436px) {
+  .headerContentsContainer {
+    top: 39%;
   }
-}
-
-@media only screen and (max-width: 457px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground457.png");
-  }
-}
-
-@media only screen and (max-width: 415px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground_360.png");
-    height: 150vh;
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -877,35 +922,48 @@ li {
   }
 }
 
+@media only screen and (max-width: 390px) {
+  h1 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+}
+
 @media only screen and (max-width: 375px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground_360.png");
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .subHeader {
+    font-size: 0.5rem;
+  }
+  .headerParagraph {
+    line-height: 1rem;
   }
   .headerContentsContainer {
-    top: 43%;
-  }
-  .menuToggle span {
-    background: #c4c4c4;
+    top: 30%;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  .headerContainer {
-    background-image: url("../images/headerBackground_360.png");
-    height: 150vh;
-  }
   .headerContentsContainer {
-    top: 40%;
+    top: 32%;
   }
   h1 {
     margin: 0%;
   }
+  .subHeader {
+    font-size: 0.8rem;
+  }
+  .headerConnect {
+    font-size: 0.8rem;
+  }
 }
 
-@media only screen and (max-width: 355px) {
+@media only screen and (max-width: 320px) {
   h1 {
-    margin-top: 0%;
-    font-size: 2rem;
+    font-size: 1rem;
+    line-height: 2.2rem;
   }
   .subHeader {
     font-size: 1rem;
@@ -933,7 +991,7 @@ li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #625c5c;
+  color: #686666;
 }
 
 .zoltarSpeaksContents p,
@@ -944,6 +1002,7 @@ li {
   font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
+  color: #686666;
 }
 
 .zoltarSpeaksContents p {
@@ -954,6 +1013,7 @@ li {
   font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
+  color: #686666;
 }
 
 .foodieAppContents p {
@@ -962,6 +1022,7 @@ li {
   line-height: 1.4rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  color: #686666;
 }
 
 .eventsAppContents p {
@@ -984,7 +1045,7 @@ li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #8f278f;
+  color: #e61c5d;
   font-size: 1.2rem;
 }
 
@@ -1203,17 +1264,11 @@ footer {
 
 @media only screen and (max-width: 789px) {
   .foodieAppButtonContainer button {
-    margin: 0;
+    margin: 3% 0;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .headerContents {
-    margin-top: 5%;
-  }
-  .arrowContainer {
-    margin-top: 6%;
-  }
   .zoltarSpeaksContents,
   .foodieAppContents,
   .eventsAppContents {
@@ -1269,7 +1324,6 @@ footer {
   .eventsHeading {
     padding-top: 5%;
     padding-left: 0;
-    font-family: 'Gravitas One', cursive;
     font-size: 1.1rem;
     line-height: 1.2rem;
   }
@@ -1298,37 +1352,41 @@ footer {
   }
 }
 
-@media only screen and (max-width: 360px) {
-  .headerTitle h1 {
-    font-size: 1.9rem;
-    line-height: 2.2rem;
-    padding: 0% 10%;
-    margin: 0%;
-  }
-  .subHeader {
-    font-size: 0.9rem;
-    padding-bottom: 5%;
-  }
-  .headerParagraph {
-    font-size: 0.9rem;
-    padding-bottom: 10%;
-  }
-  .contactFieldset {
-    margin: 0;
+@media only screen and (max-width: 497px) {
+  .sectionHeading {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  h1 {
-    font-size: 1.9rem;
-    line-height: 2rem;
-    margin: 0%;
-  }
-  .headerParagraph {
-    font-size: 0.8rem;
+  .zoltarSpeaksContainer,
+  .foodieAppContainer,
+  .eventsAppContainer {
+    margin-left: 9%;
   }
   .skills {
     font-size: 0.8rem;
+  }
+  .sectionHeading {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 3%;
+  }
+  .zoltarHeading,
+  .foodieHeading,
+  .eventsHeading {
+    font-size: 0.9rem;
+  }
+  p.zoltarParagraph,
+  p.foodieParagraph,
+  p.eventsParagraph {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .contactFieldset {
+    margin: 0;
   }
 }
 
@@ -1391,7 +1449,7 @@ footer {
 }
 
 .email:hover {
-  color: #8f278f;
+  color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1529,11 +1587,11 @@ textarea#contactComment {
 .socialHandles i {
   font-size: 1.5rem;
   margin: 0 2rem;
-  color: #808080;
+  color: #8f278f;
 }
 
 .socialHandles i:hover {
-  color: #8f278f;
+  color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1574,8 +1632,16 @@ textarea#contactComment {
 }
 
 @media only screen and (max-width: 551px) {
-  .skillsToolkit {
-    display: none;
+  .iconGrouping {
+    margin: 0 4%;
+    margin-top: 3%;
+    grid-gap: 0;
+    -ms-grid-columns: (minmax(73px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(73px, 1fr));
+  }
+  .iconGrouping img {
+    width: 50px;
+    height: 50px;
   }
   .contactParagraph1,
   .contactParagraph2 {

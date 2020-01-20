@@ -1,13 +1,24 @@
 $primary: #8f278f;
-$secondary: #625c5c;
-$tertiary: #ddbedd;
+$secondary: #686666;
+$tertiary: #e61c5d;
 
+html {
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+}
 
 .headerContainer {
-  background-image: url('../images/headerBackground.png');
+  background: white;
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .whitneyReidLogo{
+   width: 65%;
+   height: 65%;
+   margin: 0 auto;
+   margin-bottom: 5%;
  }
 
 .headerContentsContainer {
@@ -45,30 +56,24 @@ li {
   margin-right: 3%;
 }
 
-.whitneyLogo {
-  width: 70px;
-  padding-top: 3%;
-
-}
-
 .sectionHeading {
-  text-transform:  uppercase;
+  text-transform:  capitalize;
   font-family: 'Gravitas One', cursive;
-  color: $secondary;
-  font-size: 1.7rem;
-  letter-spacing: 0.2rem;
+  color: $primary;
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .headerTitle {
-  color: $secondary;
+  color: $primary;
 }
 
 .subHeader {
-  color: $primary;
+  color: $secondary;
   padding: 1% 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 500;
-  padding-left: 1%;
+  text-align: center;
 }
 
 .headerParagraph {
@@ -94,7 +99,7 @@ li {
   font-family: 'Montserrat', sans-serif;
   
   &:hover {
-    color: $primary;
+    color: $tertiary;
     transition: all 0.3s;
   }
 }
@@ -104,19 +109,19 @@ li {
   flex-direction: column;
   position: fixed;
   right: 0;
-  bottom: 128px;
+  bottom: 90px;
   padding-right: 1%;
   z-index: 10;
 }
 
 .headerIcons i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: $primary;
   padding: 0% 15px;
   cursor: pointer;
   
   &:hover {
-    color: $secondary;
+    color: $tertiary;
     transition: all 0.3s;
   }
 }
@@ -124,14 +129,15 @@ li {
 .arrowContainer  {
   color: $primary;
   cursor: pointer;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 2%;
 
 
   i {
     font-size: 2rem;
   }
   &:hover {
-    color: $secondary;
+    color: $tertiary;
     transition: all 0.3s;
   }
 }
@@ -205,7 +211,6 @@ li {
     font-size: 3.5rem;
     text-transform: capitalize;
     line-height: 5rem;
-    // margin-top: 18%;
     padding-left: 3%;
     padding-top: 1%;
   }
@@ -272,7 +277,7 @@ li {
 	  height: 4px;
 	  margin-bottom: 5px;
 	  position: relative;
-	  background: $primary;
+	  background: $tertiary;
 	  border-radius: 3px;
 	  z-index: 20;
 	  transform-origin: 4px 0px;
@@ -385,9 +390,6 @@ li {
 
 @media only screen and (max-width: 950px){
 
-  .headerContainer {
-    background-image: url('../images/headerBackground950.png');
-  }
 
   .headerContentsContainer {
     padding-top: 10%;
@@ -414,7 +416,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 823px){
+@media only screen and (max-width: 899px){
 
   html, body {
     max-width: 100%;
@@ -424,26 +426,19 @@ li {
   .innerWrapper {
     position: relative;
   }
-  
-  .headerContainer {
-    background-image: url('../images/headerBackground674.png');
-    background-position: 80% 0px;
-    height: 150vh;
-  }
 
   .headerContentsContainer {
     display: flex;
     position: absolute;
-    top: 46%;
+    top: 40%;
   }
 
   h1 {
     width: 100%;
     text-align: center;
     padding: 0 2rem;
-    padding-bottom: 2%;
-    font-size: 2.5rem;
-    margin-top: 17%;
+    font-size: 2.3rem;
+    margin-top: 0;
     line-height: 3rem;
   }
 
@@ -473,18 +468,14 @@ li {
   .whitneyLogo {
     display: none;
   }
-  
-  .headerContainer {
-    background-position: 50% 0px;
-  }
 
   .headerConnect {
     width: 100%;
-    padding: 0 8%;
+    padding: 1% 8%;
   }
 
   .arrowContainer {
-    margin-top: 13%;
+    margin-top: 6%;
   }
 
   .zoltarSpeaksContents, 
@@ -495,89 +486,155 @@ li {
   }
 }
 
-@media only screen and (max-width: 764px){
-  // .headerContainer {
-  //   background-image: url('../images/headerBackground_740.png');
-  //   // height: 140vh;
-  // }
+@media only screen and (max-width: 712px){
 
-  .menuToggle span{
-	  background: $secondary;
+    h1 {
+      font-size: 2rem;
+  }
+
+  .subHeader {
+    font-size: 1.1rem;
+  }
+
+  .headerParagraph {
+    font-size: 0.9rem;
   }
 }
 
-@media only screen and (max-width: 740px){
-  .headerContainer {
-    background-image: url('../images/headerBackground_740.png');
-    // height: 250vh;
+@media only screen and (max-width: 628px){
+
+    h1 {
+      font-size: 1.7rem;
   }
+
+  .subHeader {
+    font-size: 1rem;
+  }
+
+  .headerParagraph {
+    font-size: 0.9rem;
+  }
+
+  .headerConnect {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 546px){
+
+    .headerContentsContainer {
+      top: 36%;
+  }
+  
+    h1 {
+      font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 492px){
+
+    h1 {
+      font-size: 1.4rem;
+  }
+
+   .subHeader {
+      font-size: 1rem;
+  }
+
+  .headerParagraph {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+   .headerConnect {
+     font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 464px){
+
+  h1 {
+    font-size: 1.3rem;
+  }
+  
   .headerContentsContainer {
     top: 42%;
   }
 }
 
-@media only screen and (max-width: 550px){
-  .list2 {
-    display: none;
-  }
-}
+@media only screen and (max-width: 436px){ 
 
-@media only screen and (max-width: 457px){
-  .headerContainer {
-    background-image: url('../images/headerBackground457.png');
+  .headerContentsContainer {
+    top: 39%;
   }
 
-}
-
-@media only screen and (max-width: 415px){ 
- .headerContainer {
-    background-image: url('../images/headerBackground_360.png');
-    height: 150vh;
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
   }
 
 }
 
 @media only screen and (max-width: 400px){
+
    .sectionHeading {
-    line-height: 1.9rem;
-    padding: 7% 5%;
+      line-height: 1.9rem;
+      padding: 7% 5%;
+  }
+}
+
+@media only screen and (max-width: 390px){ 
+
+   h1 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
   }
 }
 
 @media only screen and (max-width: 375px){ 
- .headerContainer {
-    background-image: url('../images/headerBackground_360.png');
-  }
-  .headerContentsContainer {
-    top: 43%;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
-  .menuToggle span {
-    background: #c4c4c4;
+  .subHeader {
+    font-size: 0.5rem;
+  }
+
+  .headerParagraph {
+    line-height: 1rem;
+  }
+
+  .headerContentsContainer {
+    top: 30%;
   }
 }
 
 @media only screen and (max-width: 360px){ 
 
-   .headerContainer {
-    background-image: url('../images/headerBackground_360.png');
-    height: 150vh;
-  }
-
   .headerContentsContainer {
-    top: 40%;
+    top: 32%;
   }
 
   h1 {
     margin: 0%;
   }
+
+  .subHeader {
+    font-size: 0.8rem;
+  }
+
+  .headerConnect {
+     font-size: 0.8rem;
+  }
 }
 
-@media only screen and (max-width: 355px){ 
+@media only screen and (max-width: 320px){ 
 
   h1 {
-    margin-top: 0%;
-    font-size: 2rem;
+    font-size: 1rem;
+    line-height: 2.2rem;
   }
 
   .subHeader {

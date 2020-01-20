@@ -1,6 +1,6 @@
 $primary: #8f278f;
-$secondary: #625c5c;
-$tertiary: #E6E6FA;
+$secondary: #686666;
+$tertiary: #e61c5d;
 
 //PROJECTS
 
@@ -27,6 +27,7 @@ $tertiary: #E6E6FA;
   font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
+  color: $secondary;
 }
 
 .zoltarSpeaksContents p {
@@ -37,6 +38,7 @@ $tertiary: #E6E6FA;
   font-weight: 500;
   margin-bottom: 7%;
   padding-top: 5%;
+  color: $secondary;
 }
 
 .foodieAppContents p {
@@ -45,6 +47,7 @@ $tertiary: #E6E6FA;
   line-height: 1.4rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  color: $secondary;
 }
 .eventsAppContents p {
   padding-right: 11%;
@@ -64,7 +67,7 @@ $tertiary: #E6E6FA;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: $primary;
+    color: $tertiary;
     font-size: 1.2rem;
   }
 
@@ -272,27 +275,14 @@ footer {
     }
 }
 
-@media only screen and (max-width: 800px){
-
-}
-
 @media only screen and (max-width: 789px){
 
   .foodieAppButtonContainer button {
-    margin: 0;
+    margin: 3% 0;
   }
 }
 
 @media only screen and (max-width: 767px){
-
-  .headerContents {
-    margin-top: 5%;
-  }
-
-
-  .arrowContainer {
-    margin-top: 6%;
-  }
 
   .zoltarSpeaksContents,
   .foodieAppContents,
@@ -340,7 +330,6 @@ footer {
   .eventsHeading {
     padding-top: 5%;
     padding-left: 0;
-    font-family: 'Gravitas One', cursive;
     font-size: 1.1rem;
     line-height: 1.2rem;
   }
@@ -373,45 +362,48 @@ footer {
   }
 }
 
-@media only screen and (max-width: 360px){
-
-  .headerTitle h1 {
-    font-size: 1.9rem;
-    line-height: 2.2rem;
-    padding: 0% 10%;
-    margin: 0%;
-  }
-
-  .subHeader {
-    font-size: 0.9rem;
-    padding-bottom: 5%;
-  }
-
-  .headerParagraph {
-    font-size: 0.9rem;
-    padding-bottom: 10%;
-  }
-
-  .contactFieldset {
-    margin: 0;
+@media only screen and (max-width: 497px) {
+  .sectionHeading {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
 
-  h1 {
-    font-size: 1.9rem;
-    line-height: 2rem;
-    margin: 0%;
-  }
-  .headerParagraph {
-    font-size: 0.8rem;
+  .zoltarSpeaksContainer,
+  .foodieAppContainer,
+  .eventsAppContainer {
+    margin-left: 9%;
   }
 
   .skills {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
+  }
 
+  .sectionHeading {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 3%;
+  }
+
+  .zoltarHeading, 
+  .foodieHeading, 
+  .eventsHeading {
+    font-size: 0.9rem;
+  }
+
+  p.zoltarParagraph, 
+  p.foodieParagraph, 
+  p.eventsParagraph {
+    font-size: 0.8rem;
+  }
 }
+
+@media only screen and (max-width: 360px){
+
+  .contactFieldset {
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 355px) {
