@@ -24,6 +24,7 @@ html {
 .headerContentsContainer {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5%;
 }
 
 .navLinks {
@@ -41,15 +42,9 @@ nav li:first-child {
   padding-left: 0;
 }
 
-ul {
-  display: flex;
-  padding-top: 1%;
-  align-items: center;
-}
-
 li {
   padding: 0 5%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .logoContainer {
@@ -93,10 +88,12 @@ li {
 .connect {
   color: $secondary;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
   border-bottom: 3px solid $primary;
   padding-bottom: 0.2%;
   font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  margin-top: 5%;
   
   &:hover {
     color: $tertiary;
@@ -218,7 +215,6 @@ li {
   top: 0;
   right: 0;
   z-index: 1;
- 
 }
 
 .menu-wrap .toggler {
@@ -358,11 +354,12 @@ li {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
-  font-size: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .menu-wrap .menu > div > div > ul > li > a:hover {
-  color:#fab281;
+  color: $primary;
 }
 
 //MEDIA QUERIES
@@ -401,19 +398,6 @@ li {
     padding-left: 3%;
   }
 
-  h1 {
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    line-height: 5rem;
-    padding-left: 3%;
-    padding-top: 1%;
-  }
-
-  .subHeader,
-  .headerParagraph {
-    padding-left: 3%;
-  }
-
   .headerParagraph, .headerConnect {
     padding-left: 3%;
     width: 48%;
@@ -427,15 +411,6 @@ li {
 
 @media only screen and (max-width: 1256px){
 
-  h1 {
-    font-size: 3.2rem;
-    line-height: 3.9rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
   .navLinks {
     display: none;
   }
@@ -444,49 +419,15 @@ li {
   }
 }
 
-@media only screen and (max-width: 1255px){
-
-  h1{
-    margin-top: 15%;
-  }
-}
-
-@media only screen and (max-width: 1232px){
-
-  h1 {
-    font-size: 3rem;
-    line-height: 3.7rem;
-  }
-}
-
-@media only screen and (max-width: 1140px){
-
-  h1 {
-    width: 40%;
-  }
-}
-
 @media only screen and (max-width: 950px){
-
-
-  .headerContentsContainer {
-    padding-top: 10%;
-  }
 
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
-    width: 35%;
-    margin-top: 10%;
   }
 
   .headerConnect {
     padding-bottom: 0%;
-  }
-
-  .subHeader {
-    font-size: 1.2rem;
-    width: 100%;
   }
 
   .headerParagraph {
@@ -505,31 +446,13 @@ li {
     position: relative;
   }
 
-  .headerContentsContainer {
-    display: flex;
-    position: absolute;
-    top: 40%;
-  }
-
   h1 {
     width: 100%;
     text-align: center;
     padding: 0 2rem;
-    font-size: 2.3rem;
+    // font-size: 2.3rem;
     margin-top: 0;
     line-height: 3rem;
-  }
-
-  .subHeader,
-  .headerParagraph {
-    width: 100%;
-    padding: 0 8%;
-  }
-
-  .subHeader {
-    text-align: center;
-    padding: 2%;
-    font-size: 1.3rem;
   }
 
   .headerParagraph {
@@ -566,28 +489,12 @@ li {
 
 @media only screen and (max-width: 712px){
 
-    h1 {
-      font-size: 2rem;
-  }
-
-  .subHeader {
-    font-size: 1.1rem;
-  }
-
   .headerParagraph {
     font-size: 0.9rem;
   }
 }
 
 @media only screen and (max-width: 628px){
-
-    h1 {
-      font-size: 1.7rem;
-  }
-
-  .subHeader {
-    font-size: 1rem;
-  }
 
   .headerParagraph {
     font-size: 0.9rem;
@@ -599,24 +506,24 @@ li {
 }
 
 @media only screen and (max-width: 546px){
-
-    .headerContentsContainer {
-      top: 36%;
-  }
   
-    h1 {
-      font-size: 1.5rem;
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subHeader {
+    font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 492px){
 
-    h1 {
-      font-size: 1.4rem;
+  h1 {
+    font-size: 2rem;
   }
 
-   .subHeader {
-      font-size: 1rem;
+  .subHeader {
+    font-size: 0.8rem;
   }
 
   .headerParagraph {
@@ -629,28 +536,11 @@ li {
   }
 }
 
-@media only screen and (max-width: 464px){
-
-  h1 {
-    font-size: 1.3rem;
-  }
-  
-  .headerContentsContainer {
-    top: 42%;
-  }
-}
-
 @media only screen and (max-width: 436px){ 
 
   .headerContentsContainer {
     top: 39%;
   }
-
-  h1 {
-    font-size: 2.2rem;
-    line-height: 2.5rem;
-  }
-
 }
 
 @media only screen and (max-width: 400px){
@@ -661,24 +551,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 390px){ 
-
-   h1 {
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-  }
-}
-
 @media only screen and (max-width: 375px){ 
-
-  h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  .subHeader {
-    font-size: 0.5rem;
-  }
 
   .headerParagraph {
     line-height: 1rem;
@@ -691,16 +564,12 @@ li {
 
 @media only screen and (max-width: 360px){ 
 
-  .headerContentsContainer {
-    top: 32%;
-  }
-
   h1 {
-    margin: 0%;
+    font-size: 1.7rem;
   }
 
   .subHeader {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   .headerConnect {
@@ -713,11 +582,6 @@ li {
   h1 {
     font-size: 1rem;
     line-height: 2.2rem;
-  }
-
-  .subHeader {
-    font-size: 1rem;
-    line-height: 1rem;
   }
 
   .headerParagraph {

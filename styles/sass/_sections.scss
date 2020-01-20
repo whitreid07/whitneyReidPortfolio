@@ -2,6 +2,30 @@ $primary: #8f278f;
 $secondary: #686666;
 $tertiary: #e61c5d;
 
+// ABOUT ME
+
+.headShotParagraph {
+  margin-top: 5%;
+}
+
+.aboutMeParagraph {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: $tertiary;
+}
+
+.headShotContents {
+  padding-right: 7%;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 7%;
+  padding-top: 6%;
+  color: $secondary;
+}
+
 //PROJECTS
 
 .projects {
@@ -53,6 +77,7 @@ $tertiary: #e61c5d;
   padding-right: 11%;
 }
 
+.aboutMeContainer,
 .zoltarSpeaksContainer,
 .foodieAppContainer,
 .eventsAppContainer {
@@ -80,10 +105,22 @@ $tertiary: #e61c5d;
   padding-right: 5%;
 } 
 
+.headShotContents {
+  width: 50%;
+}
+
+.headShotContainer,
 .zoltarImageContainer,
 .eventsAppImageContainer {
   width: 50%;
-  cursor: pointer;
+
+}
+
+.headShotContainer {
+  width: 500px;
+  height: 500px;
+  margin-right: 9%;
+  margin-left: 2%;
 }
 
 .foodieAppImageContainer {
@@ -209,6 +246,10 @@ footer {
     margin-left: 10%;
   }
 
+  .headShotContainer {
+    margin-left: 5%;
+  }
+
   .foodieAppImageContainer {
     margin-left: 3%;
   }
@@ -237,6 +278,28 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1130px){
+
+  .aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headShotContents {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8%;
+  }
+
+  .headShotContainer {
+    margin: 0 auto;
+  }
+
+  .aboutMeParagraph {
+    margin-top: 7%;
+  }
+}
+
 @media only screen and (max-width: 1030px){
 
   .iconGroupOne,
@@ -249,6 +312,7 @@ footer {
 }
 
 @media only screen and (max-width: 896px){
+  
   p.zoltarParagraph,
   p.foodieParagraph,
   p.eventsParagraph {
@@ -283,6 +347,22 @@ footer {
 }
 
 @media only screen and (max-width: 767px){
+
+  .headShotContainer {
+    width: 400px;
+    height: 400px;
+    margin-right: 9%;
+    margin-left: 2%;
+    margin: 0 auto;
+  }
+
+  .headShotParagraph {
+    font-size: 0.9rem;
+  }
+
+  .connect {
+    font-size: 0.9rem;
+  }
 
   .zoltarSpeaksContents,
   .foodieAppContents,
@@ -363,12 +443,31 @@ footer {
 }
 
 @media only screen and (max-width: 497px) {
+  
+  .headShotContainer {
+   width: 320px;
+   height: 320px;
+ }
   .sectionHeading {
     font-size: 1.5rem;
   }
+  
 }
 
 @media only screen and (max-width: 375px) {
+
+  .headShotParagraph {
+    font-size: 0.8rem;
+  }
+
+  .connect {
+    font-size: 0.8rem;
+  }
+
+  .aboutMeParagraph {
+    font-size: 1.1rem;
+
+  }
 
   .zoltarSpeaksContainer,
   .foodieAppContainer,
@@ -399,7 +498,12 @@ footer {
   }
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 360px) {
+
+  .headShotContainer {
+   width: 230px;
+   height: 230px;
+ }
 
   .contactFieldset {
     margin: 0;

@@ -214,6 +214,7 @@ h1 {
   color: #686666;
   text-align: center;
   padding-top: 1%;
+  white-space: nowrap;
 }
 
 h2 {
@@ -229,7 +230,7 @@ h2 {
 h3 {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h4 {
@@ -331,11 +332,6 @@ fieldset {
   color: #fff;
 }
 
-.wrapper {
-  max-width: 1680px;
-  margin: 0 auto;
-}
-
 .innerWrapper {
   max-width: 1380px;
   margin: 0 auto;
@@ -382,6 +378,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 5%;
 }
 
 .navLinks {
@@ -404,19 +401,9 @@ nav li:first-child {
   padding-left: 0;
 }
 
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 1%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 li {
   padding: 0 5%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .logoContainer {
@@ -460,10 +447,12 @@ li {
 .connect {
   color: #686666;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
   border-bottom: 3px solid #8f278f;
   padding-bottom: 0.2%;
   font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  margin-top: 5%;
 }
 
 .connect:hover {
@@ -794,11 +783,12 @@ li {
   text-decoration: none;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
-  font-size: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .menu-wrap .menu > div > div > ul > li > a:hover {
-  color: #fab281;
+  color: #8f278f;
 }
 
 @media only screen and (max-width: 1576px) {
@@ -829,17 +819,6 @@ li {
   .logoContainer {
     padding-left: 3%;
   }
-  h1 {
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    line-height: 5rem;
-    padding-left: 3%;
-    padding-top: 1%;
-  }
-  .subHeader,
-  .headerParagraph {
-    padding-left: 3%;
-  }
   .headerParagraph, .headerConnect {
     padding-left: 3%;
     width: 48%;
@@ -851,13 +830,6 @@ li {
 }
 
 @media only screen and (max-width: 1256px) {
-  h1 {
-    font-size: 3.2rem;
-    line-height: 3.9rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
   .navLinks {
     display: none;
   }
@@ -866,41 +838,13 @@ li {
   }
 }
 
-@media only screen and (max-width: 1255px) {
-  h1 {
-    margin-top: 15%;
-  }
-}
-
-@media only screen and (max-width: 1232px) {
-  h1 {
-    font-size: 3rem;
-    line-height: 3.7rem;
-  }
-}
-
-@media only screen and (max-width: 1140px) {
-  h1 {
-    width: 40%;
-  }
-}
-
 @media only screen and (max-width: 950px) {
-  .headerContentsContainer {
-    padding-top: 10%;
-  }
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
-    width: 35%;
-    margin-top: 10%;
   }
   .headerConnect {
     padding-bottom: 0%;
-  }
-  .subHeader {
-    font-size: 1.2rem;
-    width: 100%;
   }
   .headerParagraph {
     width: 45%;
@@ -915,30 +859,12 @@ li {
   .innerWrapper {
     position: relative;
   }
-  .headerContentsContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    top: 40%;
-  }
   h1 {
     width: 100%;
     text-align: center;
     padding: 0 2rem;
-    font-size: 2.3rem;
     margin-top: 0;
     line-height: 3rem;
-  }
-  .subHeader,
-  .headerParagraph {
-    width: 100%;
-    padding: 0 8%;
-  }
-  .subHeader {
-    text-align: center;
-    padding: 2%;
-    font-size: 1.3rem;
   }
   .headerParagraph {
     padding-bottom: 0 7%;
@@ -968,24 +894,12 @@ li {
 }
 
 @media only screen and (max-width: 712px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .subHeader {
-    font-size: 1.1rem;
-  }
   .headerParagraph {
     font-size: 0.9rem;
   }
 }
 
 @media only screen and (max-width: 628px) {
-  h1 {
-    font-size: 1.7rem;
-  }
-  .subHeader {
-    font-size: 1rem;
-  }
   .headerParagraph {
     font-size: 0.9rem;
   }
@@ -995,20 +909,20 @@ li {
 }
 
 @media only screen and (max-width: 546px) {
-  .headerContentsContainer {
-    top: 36%;
-  }
   h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+  .subHeader {
+    font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 492px) {
   h1 {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   .subHeader {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .headerParagraph {
     font-size: 0.8rem;
@@ -1019,22 +933,9 @@ li {
   }
 }
 
-@media only screen and (max-width: 464px) {
-  h1 {
-    font-size: 1.3rem;
-  }
-  .headerContentsContainer {
-    top: 42%;
-  }
-}
-
 @media only screen and (max-width: 436px) {
   .headerContentsContainer {
     top: 39%;
-  }
-  h1 {
-    font-size: 2.2rem;
-    line-height: 2.5rem;
   }
 }
 
@@ -1045,21 +946,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 390px) {
-  h1 {
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-  }
-}
-
 @media only screen and (max-width: 375px) {
-  h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .subHeader {
-    font-size: 0.5rem;
-  }
   .headerParagraph {
     line-height: 1rem;
   }
@@ -1069,14 +956,11 @@ li {
 }
 
 @media only screen and (max-width: 360px) {
-  .headerContentsContainer {
-    top: 32%;
-  }
   h1 {
-    margin: 0%;
+    font-size: 1.7rem;
   }
   .subHeader {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .headerConnect {
     font-size: 0.8rem;
@@ -1088,10 +972,6 @@ li {
     font-size: 1rem;
     line-height: 2.2rem;
   }
-  .subHeader {
-    font-size: 1rem;
-    line-height: 1rem;
-  }
   .headerParagraph {
     font-size: 0.9rem;
     text-align: left;
@@ -1100,6 +980,28 @@ li {
   .menu {
     width: 100%;
   }
+}
+
+.headShotParagraph {
+  margin-top: 5%;
+}
+
+.aboutMeParagraph {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #e61c5d;
+}
+
+.headShotContents {
+  padding-right: 7%;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 7%;
+  padding-top: 6%;
+  color: #686666;
 }
 
 .projects {
@@ -1152,6 +1054,7 @@ li {
   padding-right: 11%;
 }
 
+.aboutMeContainer,
 .zoltarSpeaksContainer,
 .foodieAppContainer,
 .eventsAppContainer {
@@ -1186,10 +1089,21 @@ li {
   padding-right: 5%;
 }
 
+.headShotContents {
+  width: 50%;
+}
+
+.headShotContainer,
 .zoltarImageContainer,
 .eventsAppImageContainer {
   width: 50%;
-  cursor: pointer;
+}
+
+.headShotContainer {
+  width: 500px;
+  height: 500px;
+  margin-right: 9%;
+  margin-left: 2%;
 }
 
 .foodieAppImageContainer {
@@ -1316,6 +1230,9 @@ footer {
   .eventsAppButtonContainer {
     margin-left: 10%;
   }
+  .headShotContainer {
+    margin-left: 5%;
+  }
   .foodieAppImageContainer {
     margin-left: 3%;
   }
@@ -1339,6 +1256,29 @@ footer {
 @media only screen and (max-width: 1289px) {
   .iconGrouping {
     margin: 0px 15%;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .aboutMeContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .headShotContents {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8%;
+  }
+  .headShotContainer {
+    margin: 0 auto;
+  }
+  .aboutMeParagraph {
+    margin-top: 7%;
   }
 }
 
@@ -1392,6 +1332,19 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+  .headShotContainer {
+    width: 400px;
+    height: 400px;
+    margin-right: 9%;
+    margin-left: 2%;
+    margin: 0 auto;
+  }
+  .headShotParagraph {
+    font-size: 0.9rem;
+  }
+  .connect {
+    font-size: 0.9rem;
+  }
   .zoltarSpeaksContents,
   .foodieAppContents,
   .eventsAppContents {
@@ -1476,12 +1429,25 @@ footer {
 }
 
 @media only screen and (max-width: 497px) {
+  .headShotContainer {
+    width: 320px;
+    height: 320px;
+  }
   .sectionHeading {
     font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .headShotParagraph {
+    font-size: 0.8rem;
+  }
+  .connect {
+    font-size: 0.8rem;
+  }
+  .aboutMeParagraph {
+    font-size: 1.1rem;
+  }
   .zoltarSpeaksContainer,
   .foodieAppContainer,
   .eventsAppContainer {
@@ -1508,6 +1474,10 @@ footer {
 }
 
 @media only screen and (max-width: 360px) {
+  .headShotContainer {
+    width: 230px;
+    height: 230px;
+  }
   .contactFieldset {
     margin: 0;
   }
