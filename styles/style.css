@@ -495,22 +495,45 @@ li {
 }
 
 .connect {
-  color: #686666;
-  cursor: pointer;
-  font-weight: 700;
-  border-bottom: 3px solid #8f278f;
-  padding-bottom: 0.2%;
-  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+  border-bottom: 2px solid #8f278f;
   display: inline-block;
-  margin-top: 5%;
-  text-transform: capitalize;
+  cursor: pointer;
 }
 
-.connect:hover {
-  color: #e61c5d;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-bottom: 3px solid #e61c5d;
+.connect:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e61c5d;
+  color: white;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  cursor: pointer;
+}
+
+.connect:hover:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  color: white;
+  cursor: pointer;
 }
 
 .headerIcons {
@@ -1627,7 +1650,8 @@ footer {
     font-size: 0.8rem;
   }
   .aboutMeParagraph {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-top: 10%;
   }
   .zoltarSpeaksContainer,
   .foodieAppContainer,
@@ -1661,6 +1685,11 @@ footer {
   }
   .contactFieldset {
     margin: 0;
+  }
+  .aboutMeHeading {
+    margin-left: 0%;
+    padding-left: 0%;
+    margin-bottom: 10%;
   }
 }
 

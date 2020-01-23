@@ -90,9 +90,6 @@ html {
     }
   }
 
-  
- 
-
 .headerContentsContainer {
   display: flex;
   flex-direction: column;
@@ -152,26 +149,47 @@ li {
   font-weight: 500;
 }
 
-.headerConnect {
-   padding-top: 1%;
-   padding-bottom: 8%;
-}
+  .headerConnect {
+    padding-top: 1%;
+    padding-bottom: 8%;
+  }
 
-.connect {
-  color: $secondary;
-  cursor: pointer;
-  font-weight: 700;
-  border-bottom: 3px solid $primary;
-  padding-bottom: 0.2%;
-  font-family: 'Montserrat', sans-serif;
-  display: inline-block;
-  margin-top: 5%;
-  text-transform: capitalize;
+  .connect {
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: color 1000ms;
+    transition: color 1000ms;
+    border-bottom: 2px solid $primary;
+    display: inline-block;
+    cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $tertiary;
+    color: white;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+    cursor: pointer;
   
-  &:hover {
-    color: $tertiary;
-    transition: all 0.3s;
-    border-bottom: 3px solid $tertiary;
+    }
+    &:hover:before {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      color: white;
+      cursor: pointer;
   }
 }
 
@@ -235,7 +253,6 @@ li {
        transform: translateY(-15px);
    }
 }
-
 
 // Hamburger menu/
 
