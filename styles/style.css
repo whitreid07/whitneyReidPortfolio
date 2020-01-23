@@ -209,7 +209,7 @@ ul {
 h1 {
   font-family: 'Gravitas One', cursive;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 4.7rem;
   color: #686666;
   text-align: center;
@@ -238,6 +238,8 @@ h4 {
   text-align: center;
   font-size: 1.5rem;
   text-transform: capitalize;
+  color: #686666;
+  font-weight: 500;
 }
 
 a {
@@ -280,6 +282,7 @@ button {
   border: 2px solid #8f278f;
   border-radius: 0.5rem;
   cursor: pointer;
+  z-index: 0;
 }
 
 button::before {
@@ -350,7 +353,8 @@ html {
 }
 
 .headerContainer {
-  background: white;
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  background-color: white;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -368,6 +372,52 @@ html {
   height: 65%;
   margin: 0 auto;
   margin-bottom: 5%;
+  /*setting the opacity to fade in from 0 to 1, aka from transparent to opaque*/
+  /* Firefox < 16 */
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+}
+
+.whitneyReidLogo {
+  /*animation time for different browsers*/
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#loading {
+  -webkit-animation: rotation 4s;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
 
 .headerContentsContainer {
@@ -453,12 +503,14 @@ li {
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
   margin-top: 5%;
+  text-transform: capitalize;
 }
 
 .connect:hover {
   color: #e61c5d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  border-bottom: 3px solid #e61c5d;
 }
 
 .headerIcons {
@@ -608,7 +660,7 @@ li {
 }
 
 .menu-wrap .toggler {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 2;
@@ -619,7 +671,7 @@ li {
 }
 
 .menu-wrap .hamburger {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
@@ -875,9 +927,6 @@ li {
   .headerContents {
     text-align: center;
   }
-  .whitneyLogo {
-    display: none;
-  }
   .headerConnect {
     width: 100%;
     padding: 1% 8%;
@@ -896,6 +945,119 @@ li {
 @media only screen and (max-width: 712px) {
   .headerParagraph {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-height: 360px) and (max-width: 740px) {
+  .headerContainer {
+    height: 120vh;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .subHeader {
+    font-size: 0.7rem;
+  }
+  .headShotContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .headShotContainer img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+  .arrowContainer i {
+    font-size: 1.5rem;
+  }
+  .arrowContainer {
+    bottom: -44%;
+  }
+}
+
+@media only screen and (max-width: 628px) {
+  .headerParagraph {
+    font-size: 0.9rem;
+  }
+  .headerConnect {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-height: 414px) and (max-width: 736px) {
+  .whitneyReidLogo {
+    width: 42%;
+    height: 42%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .subHeader {
+    font-size: 0.7rem;
+  }
+  .headShotContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .headShotContainer img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+  .arrowContainer i {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 628px) {
+  .headerParagraph {
+    font-size: 0.9rem;
+  }
+  .headerConnect {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-height: 375px) and (max-width: 667px) {
+  .whitneyReidLogo {
+    width: 50%;
+    height: 50%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .subHeader {
+    font-size: 0.7rem;
+  }
+  .headShotContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .headShotContainer img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+  .arrowContainer i {
+    font-size: 1.5rem;
   }
 }
 
@@ -959,6 +1121,9 @@ li {
   h1 {
     font-size: 1.7rem;
   }
+  h4 {
+    font-size: 1rem;
+  }
   .subHeader {
     font-size: 0.6rem;
   }
@@ -972,6 +1137,9 @@ li {
     font-size: 1rem;
     line-height: 2.2rem;
   }
+  h4 {
+    font-size: 1rem;
+  }
   .headerParagraph {
     font-size: 0.9rem;
     text-align: left;
@@ -984,6 +1152,10 @@ li {
 
 .headShotParagraph {
   margin-top: 5%;
+}
+
+.aboutMe, .skillsToolkit {
+  background: rgba(144, 39, 142, 0.1);
 }
 
 .aboutMeParagraph {
@@ -1008,6 +1180,10 @@ li {
   background-color: rgba(220, 220, 220, 0.1);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
   padding: 5% 0;
+}
+
+.aboutMe {
+  padding: 5%;
 }
 
 .skills {
@@ -1095,7 +1271,8 @@ li {
 
 .headShotContainer,
 .zoltarImageContainer,
-.eventsAppImageContainer {
+.eventsAppImageContainer,
+.amContainer {
   width: 50%;
 }
 
@@ -1114,7 +1291,7 @@ li {
 }
 
 .skillsToolkit {
-  padding: 8% 0;
+  padding: 6% 0;
 }
 
 .iconGrouping {
@@ -1147,6 +1324,7 @@ li {
   padding: 0.5em 1em;
   outline: none;
   border: none;
+  z-index: -99;
 }
 
 .contactFormContainer {
@@ -1272,13 +1450,16 @@ footer {
   .headShotContents {
     width: 100%;
     margin: 0 auto;
-    padding: 0 8%;
+    padding: 0;
   }
   .headShotContainer {
     margin: 0 auto;
   }
   .aboutMeParagraph {
     margin-top: 7%;
+  }
+  .aboutMe {
+    padding-bottom: 15%;
   }
 }
 

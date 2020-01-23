@@ -16,10 +16,10 @@
 
 <body>
   <div class="wrapper">
-
     <!-- HEADER STARTS -->
     <div class="menu-wrap">
       <input type="checkbox" class="toggler">
+      <!-- Hamburger menu -->
       <div class="hamburger">
         <div></div>
       </div>
@@ -27,42 +27,23 @@
         <div>
           <div>
             <ul>
-              <li><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">portfolio</a></li>
-              <li><a href="#">skills</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html">home</a></li>
+              <li><a href="#aboutme">about</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
+              <li><a href="#skills">skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <header class="headerContainer">
-      <!-- Hamburger menu -->
-
-
-
-      <!-- NAV STARTS -->
-      <!-- <div class="innerWrapper">
-        <nav class="navLinks">
-          <div class="logoContainer">
-            <img class="whitneyLogo" src="images/whitneyReidLogo.svg" alt="Whitney Reid's Logo">
-          </div>
-
-          <ul>
-            <li class="list1" tabindex="1"><a href="#projects">portfolio</a></li>
-            <li class="list2"><a href="#skills">skills</a></li>
-            <li class="list3"><a href="#contact">contact</a></li>
-          </ul>
-
-        </nav> End of nav -->
-
       <div class="headerContentsContainer">
         <div class="whitneyReidLogo">
-          <img src="./images/whitneyReidLogo.svg" alt="Whitney Reid Logo">
+          <img src="./images/whitneyReidLogo.svg" id="loading" alt="Whitney Reid Logo">
         </div>
         <div class="headerTitle">
-          <!-- <h4>hello,</h4> -->
+          <h4>hello,</h4>
           <h1>i'm whitney!</h1>
           <h3 class="subHeader">front-end web developer</h3>
         </div>
@@ -83,7 +64,7 @@
       </div>
 
       <!-- ABOUT ME SECTION -->
-      <section class="projectSection projects aboutMe">
+      <section class="projectSection aboutMe" id="aboutme">
         <h2 class="sectionHeading" id="projects">about me</h2>
         <div class="innerWrapper">
           <div class="aboutMeContainer">
@@ -93,21 +74,24 @@
             <div class="headShotContents">
               <p class="aboutMeParagraph">hello, i'm whitney reid</p>
               <p class="headShotParagraph">I'm more than meets the eye! I am a developer with a background in design.
-                With and my passion, curioisty and ability to problem-solve through visual communication and technical
-                programmig, I pride myself on building accessible, functional and eye-catching web applications to
-                captivate the best user experience using HTML, CSS, JavaScript and React! Challenging myself is what I
-                strive for - bringing
-                ideas to life from concept to final product is so rewarding!
+                With my passion, curiosity and ability to problem-solve through visual communication and technical
+                programming, I pride
+                myself on building accessible, functional and eye-catching web applications to captivate the best user
+                experience using
+                HTML, CSS, JavaScript and React! Challenging myself is what I
+                strive for - bringing ideas to life from concept to final product is so rewarding!
 
-                <p class="connect">let's make magic happen!</p>
+                <a href="#contact">
+                  <p class="connect">let's make magic happen!</p>
+                </a>
             </div>
           </div>
         </div>
       </section>
 
       <!--PROJECT 1 -->
-      <section class="projectSection projects">
-        <h2 class="sectionHeading" id="projects">my portfolio</h2>
+      <section class="projectSection projects" id="portfolio">
+        <h2 class="sectionHeading portfolio" id="projects">my portfolio</h2>
         <div class="innerWrapper">
           <div class="zoltarSpeaksContainer">
             <div class="zoltarSpeaksContents">
@@ -115,7 +99,7 @@
               <p class="zoltarParagraph">Want some useful advice? Zoltar can help! Ask a wish and navigate your coin
                 through a maze full of
                 challenges to get your wish granted. A mob programming project.
-                <span class="skills">react | rest api | html5 | sass</span></p>
+                <span class="skills">react | rest api | html5 | sass | css grid</span></p>
               <div class="zoltarSpeaksButtonContainer">
                 <button><a href="https://zoltar-speaks.firebaseapp.com/" target="_blank">View Live</button>
                 <button> <a href="https://github.com/groupThreeProjectSix/zoltarSpeaks" target="_blank">View
@@ -139,7 +123,7 @@
                   src="images/foodieAppMockup.png" alt="foodie mockup"></a>
             </div>
             <div class="foodieAppContents">
-              <h3 class="foodieHeading">Foodie App</h3>
+              <h3 class="foodieHeading">foodie app</h3>
               <p class="foodieParagraph">Not sure what to make for dinner? Foodie has you covered. Enter an ingredient
                 to
                 get 6 recipes. Based-off
@@ -157,12 +141,39 @@
           </div>
       </section>
 
-      <!--PROJECT 3 -->
+      <!-- Project 3 -->
       <section class="projects">
         <div class="innerWrapper">
           <div class="eventsAppContainer">
             <div class="eventsAppContents">
-              <h3 class="eventsHeading">Under the sea </h3>
+              <h3 class="eventsHeading">welcome to the AM</h3>
+              <p class="eventsParagraph">A single-page wedding project converted into a functional and responsive
+                website. <span class="skills">
+                  html5 | sass | javascript | css grid</span></p>
+              <div class="eventsAppButtonContainer">
+                <button><a href="http://www.welcometotheam.com/" target="_blank">View
+                    Live</a></button>
+                <button><a href="https://github.com/whitreid07/AngieMichelWedding2020" target="_blank">View
+                    Github</a></button>
+              </div>
+            </div>
+            <div class="eventsAppImageContainer">
+              <a href="https://whitreid07.github.io/whitney-reid-project-2/" target="_blank"><img
+                  src="images/welcomeAmMockUp.png" alt="events mockup"></a>
+            </div>
+          </div>
+      </section>
+
+      <!--PROJECT 4 -->
+      <section class="projects">
+        <div class="innerWrapper">
+          <div class="eventsAppContainer">
+            <div class="eventsAppImageContainer">
+              <a href="https://whitreid07.github.io/whitney-reid-project-2/" target="_blank"><img
+                  src="images/underTheSeaMockup.png" alt="events mockup"></a>
+            </div>
+            <div class="eventsAppContents">
+              <h3 class="eventsHeading">under the sea </h3>
               <p class="eventsParagraph">A multi-page PSD conversion project converted into a functional and responsive
                 website. <span class="skills">
                   html5 | sass</span></p>
@@ -173,15 +184,12 @@
                     Github</a></button>
               </div>
             </div>
-            <div class="eventsAppImageContainer">
-              <a href="https://whitreid07.github.io/whitney-reid-project-2/" target="_blank"><img
-                  src="images/underTheSeaMockup.png" alt="events mockup"></a>
-            </div>
+
           </div>
       </section>
 
       <!-- SKILLS &TOOLKIT -->
-      <section class="skillsToolkit skillsHeading">
+      <section class="skillsToolkit skillsHeading" id="skills">
         <h2 class="sectionHeading" id="skills">my skills</h2>
 
         <div class="iconGrouping">
@@ -239,13 +247,14 @@
       <div class="contactFormContainer">
         <h2 class="sectionHeading" id="contact">get in touch</h2>
         <div class="innerWrapper">
-          <form class="contactForm" action="https://formspree.io/whitney.reid.designs@gmail.com" method="POST">
+          <form class="contactForm" target="_blank" action="https://formspree.io/whitney.reid.codes@gmail.com"
+            method="POST">
             <fieldset class="contactFieldset">
               <p class="contactParagraph1">I would love to hear from you! If you would like to collaborate on a cool
                 idea or just want to grab a coffee to talk about tech send me a note!</p>
               <p class="contactParagraph2">Use the form below or directly to
                 <a href="mailto:whitney.reid.designs@gmail.com">
-                  <span class="email">whitney.reid.designs@gmail.com</span>
+                  <span class="email">whitney.reid.codes@gmail.com</span>
                 </a>
               </p>
               <div class="contactFormInput">
@@ -287,7 +296,7 @@
     </main> <!-- End of main-->
 
     <footer>
-      <p class="footerPargraph">Created and Designed by Whitney Reid © 2019 | Headshot taken by Fatima Gueye</p>
+      <p class="footerPargraph">Created and Designed by Whitney Reid with intention 💜 © 2020</p>
     </footer><!-- End of footer-->
 
   </div> <!-- End of wrapper-->

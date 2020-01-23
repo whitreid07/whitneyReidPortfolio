@@ -8,6 +8,10 @@ $tertiary: #e61c5d;
   margin-top: 5%;
 }
 
+.aboutMe, .skillsToolkit {
+  background: rgba(144,39,142, 0.1);
+}
+
 .aboutMeParagraph {
   font-weight: 700;
   text-transform: capitalize;
@@ -32,6 +36,10 @@ $tertiary: #e61c5d;
   background-color: rgba(220,220,220, 0.1);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
   padding: 5% 0;
+}
+
+.aboutMe {
+  padding: 5%;
 }
 
 .skills {
@@ -111,9 +119,9 @@ $tertiary: #e61c5d;
 
 .headShotContainer,
 .zoltarImageContainer,
-.eventsAppImageContainer {
+.eventsAppImageContainer,
+.amContainer {
   width: 50%;
-
 }
 
 .headShotContainer {
@@ -133,7 +141,7 @@ $tertiary: #e61c5d;
 //TOOLKIT
 
 .skillsToolkit {
-  padding: 8% 0;
+  padding: 6% 0;
 }
 
 .iconGrouping {
@@ -159,6 +167,7 @@ $tertiary: #e61c5d;
   padding: 0.5em 1em;
   outline: none;
   border: none;
+  z-index: -99;
 }
 
 //FORM STYLES
@@ -288,7 +297,7 @@ footer {
   .headShotContents {
     width: 100%;
     margin: 0 auto;
-    padding: 0 8%;
+    padding: 0;
   }
 
   .headShotContainer {
@@ -297,6 +306,10 @@ footer {
 
   .aboutMeParagraph {
     margin-top: 7%;
+  }
+
+  .aboutMe {
+    padding-bottom: 15%;
   }
 }
 
